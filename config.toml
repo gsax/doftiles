@@ -1,0 +1,17 @@
+[tasks.zsh_home]
+	links = [
+		[".zsh/.zshenv", "zsh/home/zshenv"],
+		[".zsh/.zshrc", "zsh/home/zshrc"],
+		[".zsh/.zprofile", "zsh/home/zprofile"],
+		[".zsh/.zlogin", "zsh/home/zlogin"],
+		[".zsh/.zlogout", "zsh/home/zlogout"],
+	]
+
+[tasks.zsh_etc]
+	links = [
+		["/etc/zsh/zshenv", "zsh/etc/zshenv"],
+		["/etc/zsh/zshrc", "zsh/etc/zshrc"],
+		["/etc/zsh/zprofile", "zsh/etc/zprofile"],
+		["/etc/zsh/zlogin", "zsh/etc/zlogin"],
+		["/etc/zsh/zlogout", "zsh/etc/zlogout"],
+	]
