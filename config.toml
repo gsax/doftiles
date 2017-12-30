@@ -1,3 +1,16 @@
+[tasks.nvim_home]
+	links = [
+		[".config/nvim/init.vim", "nvim/home/init.vim"],
+		[".config/nvim/config", "nvim/home/config"],
+		[".config/nvim/ftplugin", "nvim/home/ftplugin"],
+	]
+
+[tasks.nvim_etc]
+	links = [
+		["/etc/vim/sysinit.vim", "nvim/etc/sysinit.vim"],
+		["/etc/vim/sysinit_user.vim", "nvim/etc/sysinit_user.vim"],
+	]
+
 [tasks.zsh_home]
 	links = [
 		[".zsh/.zshenv", "zsh/home/zshenv"],
