@@ -18,6 +18,7 @@
 		[".zsh/.zprofile", "zsh/home/zprofile"],
 		[".zsh/.zlogin", "zsh/home/zlogin"],
 		[".zsh/.zlogout", "zsh/home/zlogout"],
+		[".zsh/plugins", "zsh/home/plugins/"],
 	]
 
 [tasks.zsh_etc]
