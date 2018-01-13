@@ -28,4 +28,5 @@
 		["/etc/zsh/zprofile", "zsh/etc/zprofile"],
 		["/etc/zsh/zlogin", "zsh/etc/zlogin"],
 		["/etc/zsh/zlogout", "zsh/etc/zlogout"],
+		["/etc/zsh/read_terminfo.zsh", "zsh/etc/read_terminfo.zsh"],
 	]
