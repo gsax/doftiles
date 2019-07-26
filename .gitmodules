@@ -10,3 +10,6 @@
 [submodule "polybar"]
 	path = polybar
 	url = git@github.com:gsax/dot_polybar.git
+[submodule "bspwm"]
+	path = bspwm
+	url = git@github.com:gsax/dot_bspwm.git

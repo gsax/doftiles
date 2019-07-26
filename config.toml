@@ -41,3 +41,8 @@
 		[".config/polybar/config", "polybar/home/config"],
 		[".config/polybar/launch.sh", "polybar/home/launch.sh"],
 	]
+
+[tasks.bspwm_home]
+	links = [
+		[".config/bspwm/bspwmrc", "bspwm/home/bspwmrc"],
+	]
