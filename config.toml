@@ -30,3 +30,8 @@
 		["/etc/zsh/zlogout", "zsh/etc/zlogout"],
 		["/etc/zsh/read_terminfo.zsh", "zsh/etc/read_terminfo.zsh"],
 	]
+
+[tasks.tmux_etc]
+  links = [
+	  ["/etc/tmux.conf", "tmux/etc/tmux.conf"],
+  ]
