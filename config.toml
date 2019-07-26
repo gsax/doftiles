@@ -38,6 +38,6 @@
 
 [tasks.polybar_home]
 	links = [
-		[".config/polybar/config/polybar/config", "polybar/home/config"],
+		[".config/polybar/config", "polybar/home/config"],
 		[".config/polybar/launch.sh", "polybar/home/launch.sh"],
 	]
