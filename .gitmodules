@@ -7,3 +7,6 @@
 [submodule "tmux"]
 	path = tmux
 	url = git@github.com:gsax/dot_tmux.git
+[submodule "polybar"]
+	path = polybar
+	url = git@github.com:gsax/dot_polybar.git
