@@ -16,3 +16,6 @@
 [submodule "alacritty"]
 	path = alacritty
 	url = git@github.com:gsax/dot_alacritty.git
+[submodule "firefox"]
+	path = firefox
+	url = git@github.com:gsax/dot_firefox.git
