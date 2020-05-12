@@ -1,21 +1,21 @@
 [submodule "zsh"]
 	path = zsh
-	url = git@github.com:gsax/dot_zsh.git
+	url = https://github.com/gsax/dot_zsh.git
 [submodule "nvim"]
 	path = nvim
-	url = git@github.com:gsax/dot_nvim.git
+	url = https://github.com/gsax/dot_nvim.git
 [submodule "tmux"]
 	path = tmux
-	url = git@github.com:gsax/dot_tmux.git
+	url = https://github.com/gsax/dot_tmux.git
 [submodule "polybar"]
 	path = polybar
-	url = git@github.com:gsax/dot_polybar.git
+	url = https://github.com/gsax/dot_polybar.git
 [submodule "bspwm"]
 	path = bspwm
-	url = git@github.com:gsax/dot_bspwm.git
+	url = https://github.com/gsax/dot_bspwm.git
 [submodule "alacritty"]
 	path = alacritty
-	url = git@github.com:gsax/dot_alacritty.git
+	url = https://github.com/gsax/dot_alacritty.git
 [submodule "firefox"]
 	path = firefox
-	url = git@github.com:gsax/dot_firefox.git
+	url = https://github.com/gsax/dot_firefox.git
