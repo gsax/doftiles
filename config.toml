@@ -3,12 +3,7 @@
 		[".config/nvim/init.vim", "nvim/home/init.vim"],
 		[".config/nvim/config", "nvim/home/config"],
 		[".config/nvim/ftplugin", "nvim/home/ftplugin"],
-	]
-
-[tasks.nvim_etc]
-	links = [
-		["/etc/vim/sysinit.vim", "nvim/etc/sysinit.vim"],
-		["/etc/vim/sysinit_user.vim", "nvim/etc/sysinit_user.vim"],
+		[".config/nvim/lua", "nvim/home/lua"],
 	]
 
 [tasks.zsh_home]
@@ -32,9 +27,9 @@
 	]
 
 [tasks.tmux_etc]
-  links = [
-	  ["/etc/tmux.conf", "tmux/etc/tmux.conf"],
-  ]
+	links = [
+		["/etc/tmux.conf", "tmux/etc/tmux.conf"],
+	]
 
 [tasks.polybar_home]
 	links = [
