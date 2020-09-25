@@ -1,14 +1,14 @@
-[tasks.alacritty_home]
+[tasks.alacritty]
 	links = [
 		[".config/alacritty/alacritty.yml", "alacritty/home/alacritty.yml"],
 	]
 
-[tasks.bspwm_home]
+[tasks.bspwm]
 	links = [
 		[".config/bspwm/bspwmrc", "bspwm/home/bspwmrc"],
 	]
 
-[tasks.nvim_home]
+[tasks.nvim]
 	links = [
 		[".config/nvim/init.vim", "nvim/home/init.vim"],
 		[".config/nvim/config", "nvim/home/config"],
@@ -16,18 +16,18 @@
 		[".config/nvim/lua", "nvim/home/lua"],
 	]
 
-[tasks.polybar_home]
+[tasks.polybar]
 	links = [
 		[".config/polybar/config", "polybar/home/config"],
 		[".config/polybar/launch.sh", "polybar/home/launch.sh"],
 	]
 
-[tasks.tmux_home]
+[tasks.tmux]
 	links = [
 		[".tmux.conf", "tmux/home/tmux.conf"],
 	]
 
-[tasks.zsh_home]
+[tasks.zsh]
 	links = [
 		[".zsh/.zshenv", "zsh/home/zshenv"],
 		[".zsh/.zshrc", "zsh/home/zshrc"],
@@ -37,12 +37,13 @@
 		[".zsh/plugins", "zsh/home/plugins/"],
 	]
 
-[tasks.zsh_etc]
+[tasks.zsh_global]
 	links = [
 		["/etc/zsh/zshenv", "zsh/etc/zshenv"],
 		["/etc/zsh/zshrc", "zsh/etc/zshrc"],
 		["/etc/zsh/zprofile", "zsh/etc/zprofile"],
 		["/etc/zsh/zlogin", "zsh/etc/zlogin"],
 		["/etc/zsh/zlogout", "zsh/etc/zlogout"],
+		["/etc/zsh/grc.sh", "zsh/etc/grc.sh"],
 		["/etc/zsh/read_terminfo.zsh", "zsh/etc/read_terminfo.zsh"],
 	]
