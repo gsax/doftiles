@@ -6,6 +6,11 @@
 		[".config/nvim/lua", "nvim/home/lua"],
 	]
 
+[tasks.tmux_home]
+	links = [
+		[".tmux.conf", "tmux/home/tmux.conf"],
+	]
+
 [tasks.zsh_home]
 	links = [
 		[".zsh/.zshenv", "zsh/home/zshenv"],
@@ -24,11 +29,6 @@
 		["/etc/zsh/zlogin", "zsh/etc/zlogin"],
 		["/etc/zsh/zlogout", "zsh/etc/zlogout"],
 		["/etc/zsh/read_terminfo.zsh", "zsh/etc/read_terminfo.zsh"],
-	]
-
-[tasks.tmux_etc]
-	links = [
-		["/etc/tmux.conf", "tmux/etc/tmux.conf"],
 	]
 
 [tasks.polybar_home]
