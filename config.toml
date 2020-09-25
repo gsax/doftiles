@@ -1,3 +1,13 @@
+[tasks.alacritty_home]
+	links = [
+		[".config/alacritty/alacritty.yml", "alacritty/home/alacritty.yml"],
+	]
+
+[tasks.bspwm_home]
+	links = [
+		[".config/bspwm/bspwmrc", "bspwm/home/bspwmrc"],
+	]
+
 [tasks.nvim_home]
 	links = [
 		[".config/nvim/init.vim", "nvim/home/init.vim"],
@@ -35,14 +45,4 @@
 	links = [
 		[".config/polybar/config", "polybar/home/config"],
 		[".config/polybar/launch.sh", "polybar/home/launch.sh"],
-	]
-
-[tasks.bspwm_home]
-	links = [
-		[".config/bspwm/bspwmrc", "bspwm/home/bspwmrc"],
-	]
-
-[tasks.alacritty_home]
-	links = [
-		[".config/alacritty/alacritty.yml", "alacritty/home/alacritty.yml"],
 	]
