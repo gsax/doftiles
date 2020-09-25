@@ -16,6 +16,12 @@
 		[".config/nvim/lua", "nvim/home/lua"],
 	]
 
+[tasks.polybar_home]
+	links = [
+		[".config/polybar/config", "polybar/home/config"],
+		[".config/polybar/launch.sh", "polybar/home/launch.sh"],
+	]
+
 [tasks.tmux_home]
 	links = [
 		[".tmux.conf", "tmux/home/tmux.conf"],
@@ -39,10 +45,4 @@
 		["/etc/zsh/zlogin", "zsh/etc/zlogin"],
 		["/etc/zsh/zlogout", "zsh/etc/zlogout"],
 		["/etc/zsh/read_terminfo.zsh", "zsh/etc/read_terminfo.zsh"],
-	]
-
-[tasks.polybar_home]
-	links = [
-		[".config/polybar/config", "polybar/home/config"],
-		[".config/polybar/launch.sh", "polybar/home/launch.sh"],
 	]
