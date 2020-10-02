@@ -30,17 +30,22 @@
 
 [tasks.tmux]
 	links = [
-		[".tmux.conf", "tmux/home/tmux.conf"],
+		[".config/tmux/tmux.conf", "tmux/home/tmux.conf"],
 	]
 
 [tasks.zsh]
 	links = [
-		[".zsh/.zshenv", "zsh/home/zshenv"],
-		[".zsh/.zshrc", "zsh/home/zshrc"],
-		[".zsh/.zprofile", "zsh/home/zprofile"],
-		[".zsh/.zlogin", "zsh/home/zlogin"],
-		[".zsh/.zlogout", "zsh/home/zlogout"],
-		[".zsh/plugins", "zsh/home/plugins/"],
+		[".config/zsh/.zshenv", "zsh/home/zshenv"],
+		[".config/zsh/zshenv", "zsh/home/zshenv"],
+		[".config/zsh/.zshrc", "zsh/home/zshrc"],
+		[".config/zsh/zshrc", "zsh/home/zshrc"],
+		[".config/zsh/.zprofile", "zsh/home/zprofile"],
+		[".config/zsh/zprofile", "zsh/home/zprofile"],
+		[".config/zsh/.zlogin", "zsh/home/zlogin"],
+		[".config/zsh/zlogin", "zsh/home/zlogin"],
+		[".config/zsh/.zlogout", "zsh/home/zlogout"],
+		[".config/zsh/zlogout", "zsh/home/zlogout"],
+		[".config/zsh/plugins", "zsh/home/plugins/"],
 	]
 
 [tasks.zsh_global]
