@@ -19,3 +19,6 @@
 [submodule "firefox"]
 	path = firefox
 	url = https://github.com/gsax/dot_firefox.git
+[submodule "neomutt"]
+	path = neomutt
+	url = https://github.com/gsax/dot_neomutt.git

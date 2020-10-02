@@ -8,6 +8,12 @@
 		[".config/bspwm/bspwmrc", "bspwm/home/bspwmrc"],
 	]
 
+[tasks.neomutt]
+	links = [
+		[".config/neomutt/neomuttrc", "neomutt/home/neomuttrc"],
+		[".config/neomutt/mailsignature", "neomutt/home/mailsignature"],
+	]
+
 [tasks.nvim]
 	links = [
 		[".config/nvim/init.vim", "nvim/home/init.vim"],
