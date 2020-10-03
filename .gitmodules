@@ -22,3 +22,6 @@
 [submodule "neomutt"]
 	path = neomutt
 	url = https://github.com/gsax/dot_neomutt.git
+[submodule "X"]
+	path = X
+	url = https://github.com/gsax/dot_X.git

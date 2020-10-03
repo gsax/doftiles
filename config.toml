@@ -33,6 +33,19 @@
 		[".config/tmux/tmux.conf", "tmux/home/tmux.conf"],
 	]
 
+[tasks.X]
+	links = [
+		[".Xresources", "X/home/Xresources"],
+		[".xinitrc", "X/home/xinitrc"],
+		[".xsession", "X/home/xsession"],
+	]
+
+[tasks.X_global]
+	links = [
+		["/etc/X11/xorg.conf.d/10-evdev.conf", "etc/xorg.conf.d/10-evdev.conf"],
+		["/etc/X11/xorg.conf.d/20-security.conf", "etc/xorg.conf.d/20-security.conf"],
+	]
+
 [tasks.zsh]
 	links = [
 		[".config/zsh/.zshenv", "zsh/home/zshenv"],
