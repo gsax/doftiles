@@ -28,6 +28,11 @@
 		[".config/polybar/launch.sh", "polybar/home/launch.sh"],
 	]
 
+[tasks.ranger]
+	links = [
+		[".config/ranger/rc.conf", "ranger/home/rc.conf"],
+	]
+
 [tasks.tmux]
 	links = [
 		[".config/tmux/tmux.conf", "tmux/home/tmux.conf"],

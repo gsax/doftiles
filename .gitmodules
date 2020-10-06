@@ -25,3 +25,6 @@
 [submodule "X"]
 	path = X
 	url = https://github.com/gsax/dot_X.git
+[submodule "ranger"]
+	path = ranger
+	url = https://github.com/gsax/dot_ranger.git
