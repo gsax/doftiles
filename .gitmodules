@@ -28,3 +28,6 @@
 [submodule "ranger"]
 	path = ranger
 	url = https://github.com/gsax/dot_ranger.git
+[submodule "peaclock"]
+	path = peaclock
+	url = https://github.com/gsax/dot_peaclock.git

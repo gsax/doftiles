@@ -22,6 +22,12 @@
 		[".config/nvim/lua", "nvim/home/lua"],
 	]
 
+[tasks.peaclock]
+	links = [
+		[".config/peaclock/binary.conf", "peaclock/home/binary.conf"],
+		[".config/peaclock/digital.conf", "peaclock/home/digital.conf"],
+	]
+	
 [tasks.polybar]
 	links = [
 		[".config/polybar/config", "polybar/home/config"],
