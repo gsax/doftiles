@@ -11,6 +11,7 @@
 [tasks.neomutt]
 	links = [
 		[".config/neomutt/neomuttrc", "neomutt/home/neomuttrc"],
+		[".config/neomutt/gsx.gpg", "neomutt/home/gsx.gpg"],
 		[".config/neomutt/mailsignature", "neomutt/home/mailsignature"],
 	]
 
