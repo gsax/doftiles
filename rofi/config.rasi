@@ -1,0 +1,4 @@
+configuration {
+	font: "Noto Sans 10";
+	theme: "dracula-gsx";
+}

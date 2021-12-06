@@ -1,0 +1,19 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	alacritty
+
+# program launcher
+super + @space
+	rofi -m DP-1 -matching fuzzy -sorting-method fzf -sort -combi-modi window,run -show combi -modi combi
+super + o
+	rofi -m DP-1 -matching fuzzy -sorting-method fzf -sort -show run
+super + p
+	rofi -m DP-1 -matching normal -show window
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd ~/.config/sxhkd/bspwm_sxhkdrc

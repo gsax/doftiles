@@ -1,0 +1,6 @@
+[user]
+	name = Georg Sachs
+	email = gsx@protaisn.org
+	signingkey = 09B7DCB1595B1A3484FE2005EC22623990AC1A58
+[pull]
+	rebase = false

@@ -1,0 +1,41 @@
+[general]
+status_path = "~/.cache/vdirsyncer"
+
+# CARDDAV
+[pair cloud_contacts]
+a = "cloud_contacts_local"
+b = "cloud_contacts_remote"
+
+collections = ["from a", "from b"]
+metadata = ["displayname"]
+conflict_resolution = null
+
+[storage cloud_contacts_local]
+type = "filesystem"
+path = "~/Contacts/"
+fileext = ".vcf"
+
+[storage cloud_contacts_remote]
+type = "carddav"
+url.fetch = ["command", "/home/gsx/.config/vdirsyncer/get_url.sh"]
+username.fetch = ["command", "/home/gsx/.config/vdirsyncer/get_user.sh"]
+password.fetch = ["command", "/home/gsx/.config/vdirsyncer/get_pass.sh"]
+
+# CALDAV
+[pair cloud_calendar]
+a = "cloud_calendar_local"
+b = "cloud_calendar_remote"
+
+collections = ["from a", "from b"]
+metadata = ["displayname", "color"]
+
+[storage cloud_calendar_local]
+type = "filesystem"
+path = "~/Calendars/"
+fileext = ".ics"
+
+[storage cloud_calendar_remote]
+type = "caldav"
+url.fetch = ["command", "/home/gsx/.config/vdirsyncer/get_url.sh"]
+username.fetch = ["command", "/home/gsx/.config/vdirsyncer/get_user.sh"]
+password.fetch = ["command", "/home/gsx/.config/vdirsyncer/get_pass.sh"]

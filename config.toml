@@ -45,6 +45,14 @@
 		[".config/tmux/tmux.conf", "tmux/home/tmux.conf"],
 	]
 
+[tasks.vdirsyncer]
+	links = [
+		[".config/vdirsyncer/config", "vdirsyncer/config"],
+		[".config/vdirsyncer/get_url.sh", "vdirsyncer/get_url.sh"],
+		[".config/vdirsyncer/get_user.sh", "vdirsyncer/get_user.sh"],
+		[".config/vdirsyncer/get_pass.sh", "vdirsyncer/get_pass.sh"],
+	]
+
 [tasks.X]
 	links = [
 		[".Xresources", "X/home/Xresources"],
