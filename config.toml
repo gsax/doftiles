@@ -25,6 +25,7 @@
 		[".config/nvim/config", "nvim/home/config"],
 		[".config/nvim/ftplugin", "nvim/home/ftplugin"],
 		[".config/nvim/lua", "nvim/home/lua"],
+		[".config/nvim/snippets", "nvim/home/snippets"],
 	]
 
 [tasks.peaclock]
