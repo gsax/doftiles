@@ -8,6 +8,11 @@
 		[".config/bspwm/bspwmrc", "bspwm/home/bspwmrc"],
 	]
 
+[tasks.Disable_ECC]
+	links = [
+		["/etc/modprobe.d/edac-blacklist.conf", "Disable_ECC/edac-blacklist.conf"],
+	]
+
 [tasks.neomutt]
 	links = [
 		[".config/neomutt/neomuttrc", "neomutt/home/neomuttrc"],
