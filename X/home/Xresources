@@ -1,0 +1,109 @@
+!! Color Definitions
+!#define bg    #000000
+!#define fg    #a6a6a6
+
+!! Normal Colors
+!#define blk   #000000
+!#define red   #cd0000
+!#define grn   #00cd00
+!#define ylw   #cdcd00
+!#define blu   #7777ff
+!#define mag   #cd00cd
+!#define cyn   #00cdcd
+!#define wht   #a6a6a6
+
+!! Bright Colors
+!#define bblk  #7f7f7f
+!#define bred  #ff0000
+!#define bgrn  #00ff00
+!#define bylw  #ffff00
+!#define bblu  #9999ff
+!#define bmag  #ff00ff
+!#define bcyn  #00ffff
+!#define bwht  #ffffff
+
+!! Colors
+!*background:   bg
+!*foreground:   fg
+!*cursorColor:  grn
+
+!*color0:      blk
+!*color1:      red
+!*color2:      grn
+!*color3:      ylw
+!*color4:      blu
+!*color5:      mag
+!*color6:      cyn
+!*color7:      wht
+!*color8:      bblk
+!*color9:      bred
+!*color10:     bgrn
+!*color11:     bylw
+!*color12:     bblu
+!*color13:     bmag
+!*color14:     bcyn
+!*color15:     bwht
+
+!! Dracula Xresources palette
+!*.foreground: #F8F8F2
+!*.background: #282A36
+!*.color0:     #000000
+!*.color8:     #4D4D4D
+!*.color1:     #FF5555
+!*.color9:     #FF6E67
+!*.color2:     #50FA7B
+!*.color10:    #5AF78E
+!*.color3:     #F1FA8C
+!*.color11:    #F4F99D
+!*.color4:     #BD93F9
+!*.color12:    #CAA9FA
+!*.color5:     #FF79C6
+!*.color13:    #FF92D0
+!*.color6:     #8BE9FD
+!*.color14:    #9AEDFE
+!*.color7:     #BFBFBF
+!*.color15:    #E6E6E6
+
+! special
+*.foreground:   #f8f8f2
+*.background:   #181a26
+*.cursorColor:  #50fa7b
+
+! black
+*.color0:       #000000
+*.color8:       #4d4d4d
+
+! red
+*.color1:       #ff5555
+*.color9:       #ff6e67
+
+! green
+*.color2:       #00fa3f
+*.color10:      #25f76b
+
+! yellow
+*.color3:       #bffa35
+*.color11:      #daf97d
+
+! blue
+*.color4:       #c153f9
+*.color12:      #b682fa
+
+! magenta
+*.color5:       #ff24a2
+*.color13:      #ff5db9
+
+! cyan
+*.color6:       #26d7fd
+*.color14:      #86e9fe
+
+! white
+*.color7:       #bfbfbf
+*.color15:      #e6e6e6
+
+*.Nsxiv.window.foreground: #6272a4
+*.Nsxiv.window.background: #181a26
+*.Nsxiv.mark.foreground: #50fa7b
+!*.Sxiv.font:       xft:xos4 Terminus:pixelsize=12:style=Regular 
+*.Nsxiv.bar.foreground: #af87ff
+*.Nsxiv.bar.background: #303030

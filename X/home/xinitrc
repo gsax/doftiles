@@ -1,0 +1,39 @@
+#!/usr/bin/bash
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+list=( $(ls -1 /home/gsx/.66/conf/svscan@gsx) )
+for i in ${list[@]};do
+    var=$(</home/gsx/.66/conf/svscan@gsx/${i})
+    for j in ${var[@]}; do
+		export ${j}
+    done
+done
+
+
+66-all up
+
+## Try consolekit
+if 66-which -q ck-launch-session; then
+	cmd="exec ck-launch-session $@"
+else
+	cmd="exec $@"
+fi
+
+xsetroot -cursor_name left_ptr
+
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
+exec hsetroot -root -cover ~/Pictures/EVA/neon_genesis_evangelion-3.jpg &
+exec picom --fade-in-step=0.2 --fade-out-step=0.2 --vsync --backend glx --experimental-backends --blur-method dual_kawase --blur-strength 5 &
+exec xbanish &
+exec autocutsel &
+exec autocutsel -selection PRIMARY &
+exec sxhkd ~/.config/sxhkd/bspwm_sxhkdrc &
+
+exec bspwm

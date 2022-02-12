@@ -1,0 +1,152 @@
+[colors]
+; Base colors from .Xresources
+bg            =   ${xrdb:background}
+fg            =   ${xrdb:foreground}
+
+black         =   ${xrdb:color0}
+red           =   ${xrdb:color1}
+green         =   ${xrdb:color2}
+yellow        =   ${xrdb:color3}
+blue          =   ${xrdb:color4}
+magenta       =   ${xrdb:color5}
+cyan          =   ${xrdb:color6}
+white         =   ${xrdb:color7}
+
+brightblack   =   ${xrdb:color8}
+brightred     =   ${xrdb:color9}
+brightgreen   =   ${xrdb:color10}
+brightyellow  =   ${xrdb:color11}
+brightblue    =   ${xrdb:color12}
+brightmagenta =   ${xrdb:color13}
+brightcyan    =   ${xrdb:color14}
+brightwhite   =   ${xrdb:color15}
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[bar/top]
+wm-restack = bspwm
+height = 14
+offset-x = 0
+offset-y = 0
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+padding = 2
+module-margin = 1
+
+font-0 = Noto:size=12;4
+font-1 = Noto Serif Tibetan:style=Bold:size=12;5
+font-2 = NotoSans Nerd Font Mono:size=10;2
+
+modules-left = bspwm
+modules-center =
+modules-right = acpitz-acpi-0 wlan eth battery
+
+tray-position = none
+
+[bar/LVDS1]
+inherit = bar/top
+monitor = LVDS1
+width = 1366
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+enable-scroll = false
+
+label-focused-foreground = ${colors.brightgreen}
+label-occupied-foreground = ${colors.blue}
+label-empty-foreground = ${colors.brightblack}
+
+[module/package-id-0]
+type = internal/temperature
+interval = 0.5
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input
+
+format = <label>
+label = %temperature-c%
+label-foreground = ${colors.green}
+units = true
+
+[module/acpitz-acpi-0]
+type = internal/temperature
+interval = 0.5
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon0/temp1_input
+
+format = <label>
+label = %temperature-c%
+label-foreground = ${colors.green}
+units = true
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal>
+ramp-signal-0 = 直
+ramp-signal-0-foreground = ${colors.red}
+ramp-signal-1 = 直
+ramp-signal-1-foreground = ${colors.brightred}
+ramp-signal-2 = 直
+ramp-signal-2-foreground = ${colors.magenta}
+ramp-signal-3 = 直
+ramp-signal-3-foreground = ${colors.yellow}
+ramp-signal-4 = 直
+ramp-signal-4-foreground = ${colors.green}
+ramp-signal-5 = 直
+ramp-signal-5-foreground = ${colors.brightgreen}
+
+format-disconnected = <label-disconnected>
+label-disconnected = 睊
+label-disconnected-foreground = ${colors.brightblack}
+
+[module/eth]
+type = internal/network
+interface = enp0s25
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected = 
+label-connected-foreground = ${colors.brightgreen}
+
+format-disconnected = <label-disconnected>
+label-disconnected = 
+label-disconnected-foreground = ${colors.brightblack}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 99
+
+format-full = <label-full>
+label-full =  %percentage%% 
+label-full-foreground = ${colors.brightgreen}
+
+format-charging = <ramp-capacity> <label-charging>
+label-charging = %percentage%% ﮣ
+label-charging-foreground = ${colors.green}
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%% ﮤ
+label-discharging-foreground = ${colors.blue}
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${colors.brightblack}
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = ${colors.red}
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = ${colors.yellow}
+ramp-capacity-3 = 
+ramp-capacity-3-foreground = ${colors.green}
+ramp-capacity-4 = 
+ramp-capacity-4-foreground = ${colors.brightgreen}
+
+; vim:ft=dosini

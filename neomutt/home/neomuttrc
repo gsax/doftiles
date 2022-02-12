@@ -1,0 +1,135 @@
+# imap settings
+# set mailboxpaths
+set imap_user="`gpg -qd ~/.config/neomutt/gsx.gpg | grep imap_user | cut -d ' ' -f2`"
+set imap_pass="`gpg -qd ~/.config/neomutt/gsx.gpg | grep imap_pass | cut -d ' ' -f2`"
+set spoolfile="`gpg -qd ~/.config/neomutt/gsx.gpg | grep spoolfile | cut -d ' ' -f2`"
+set folder="`gpg -qd ~/.config/neomutt/gsx.gpg | grep folder | cut -d ' ' -f2`"
+set record="+Sent"
+set postponed="+Drafts"
+set trash="+Trash"
+
+# TLS settings
+set certificate_file="~/.local/share/neomutt/certificates"
+set ssl_starttls=no
+set ssl_force_tls=yes
+
+# Don't wait to enter mailbox manually 
+unset imap_passive
+# Use imap idle
+set imap_idle=yes
+# Automatically poll subscribed mailboxes for new mail
+set imap_check_subscribed
+# Reduce polling frequency to a sane level
+set mail_check=60
+# Poll INBOX more often
+set timeout=10
+# keep a cache of headers for faster loading
+set header_cache="~/.cache/neomutt/header_cache"
+# keep a cache of messages for faster loading
+set message_cachedir="~/.cache/neomutt/message_cachedir"
+# Display download progress every 5K
+set net_inc=5
+
+# misc
+set allow_8bit=yes
+set copy=ask-yes
+set delete=ask-yes
+set edit_headers=yes
+set editor="vi +8"
+set mask="!^\\.[^.]"
+set move=ask-yes
+set pager_index_lines=7
+set send_charset="us-ascii:utf-8"
+set signature="~/.config/neomutt/mailsignature"
+set sort=threads
+set use_envelope_from=yes
+set use_from=yes
+
+# sidebar
+set sidebar_visible = no
+set sidebar_new_mail_only = no
+set sidebar_next_new_wrap = yes
+set sidebar_on_right = no
+set mail_check_stats
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_sort_method = "path"
+
+# look
+set status_format=" %r %b %f %n Del %d Msgs %m %l %> (%P)"
+set pager_format="%-10.10i %[!%a %b %d %R]"
+set date_format="!%H:%M %a %d %b"
+set index_format="%4C %Z %2M %[%F] %-40.40F %s"
+set folder_format="%2C %t %8s %d %N %f"
+
+# Default From:
+set realname="Georg Sachs"
+set from="gsx@protaisn.org"
+
+# use To: as From: in replys
+set reverse_name
+alternates "(^.+@protaisn\.(com|org)$)"
+alternates "(^.+@straem\.me$)"
+
+# exceptions from the abouve
+unalternates "(^analspinach@protaisn\.(com|org)$)"
+unalternates "(^analspinach@straem\.me$)"
+unalternates "(^anthropogenicmutilation@protaisn\.(com|org)$)"
+unalternates "(^anthropogenicmutilation@straem\.me$)"
+unalternates "(^biernot@protaisn\.(com|org)$)"
+unalternates "(^biernot@straem\.me$)"
+unalternates "(^rafaelo@protaisn\.(com|org)$)"
+unalternates "(^rafaelo@straem\.me$)"
+
+# header receiving
+ignore *
+unignore  Content-Type: Date: To: Cc: From: Subject: User-Agent:
+hdr_order Date From To Cc Subject User-Agent
+
+# GnuPG
+#source /etc/mutt/gpg.rc
+set crypt_autosign=yes
+set pgp_default_key="0x09B7DCB1595B1A3484FE2005EC22623990AC1A58"
+set pgp_sign_as="0x09B7DCB1595B1A3484FE2005EC22623990AC1A58"
+set pgp_self_encrypt = yes
+set crypt_use_gpgme = yes
+set crypt_use_pka = yes
+set pgp_auto_decode = yes
+
+# S/MIME
+set smime_certificates="~/.local/share/neomutt/smime_certificates"
+set smime_keys="~/.local/share/neomutt/smime_keys"
+
+# show HTML-mails
+alternative_order text/plain text/enriched text/html
+#auto_view text/html
+
+# adressbook
+set query_command="khard email --parsable"
+bind editor <Tab> complete-query
+bind editor ^T complete
+macro index,pager A \
+    "<pipe-message>khard add-email<return>" \
+    "add the sender email address to khard"
+
+# extract urls
+macro index,pager \cu \
+    <pipe-entry>'url_filter.sh -'<enter> \
+    'call urlview to extract URLs out of a message'
+
+# delete without trash
+bind index,pager D purge-message
+
+# move mails to archive
+#macro index S ":set confirmappend=no \
+#    delete=yes\n<tag-prefix><save-message>=Archive\n<sync-mailbox>:set \
+#    confirmappend=yes delete=ask-yes\n"
+#macro index S ":set confirmappend=yes \
+#    delete=yes\n<tag-prefix><save-message>=Archive\n"
+macro index S "<tag-prefix><save-message>=Archive\n"
+macro pager S "<save-message>=Archive\n"
+
+# colors
+source ~/sources/dracula/mutt/dracula.muttrc
+
+# limit mails with / and search their Header and Body
+macro index / <limit>~B
