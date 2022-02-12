@@ -65,6 +65,11 @@
 		["/etc/X11/xorg.conf.d/20-security.conf", "etc/xorg.conf.d/20-security.conf"],
 	]
 
+[tasks.yay]
+	links = [
+		[".config/yay/config.json", "yay/config.json"],
+	]
+
 [tasks.zsh]
 	links = [
 		[".config/zsh/.zshenv", "zsh/home/zshenv"],
