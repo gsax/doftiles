@@ -45,6 +45,11 @@
 		[".config/ranger/rc.conf", "ranger/home/rc.conf"],
 	]
 
+[tasks.stylua]
+	links = [
+		[".config/stylua/stylua.toml", "stylua/stylua.toml"],
+	]
+
 [tasks.tmux]
 	links = [
 		[".config/tmux/tmux.conf", "tmux/home/tmux.conf"],
