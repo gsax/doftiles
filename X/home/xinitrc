@@ -34,7 +34,6 @@ xrandr --output HDMI2 --off
 xrandr --output HDMI3 --off
 xrandr --output VGA1 --off
 xrandr --output VIRTUAL1 --off
-#xrandr --output LVDS1 --dpi 125.37
 xrandr --output LVDS1 --auto
 fi
 
