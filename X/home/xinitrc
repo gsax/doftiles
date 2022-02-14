@@ -25,13 +25,34 @@ else
 	cmd="exec $@"
 fi
 
+if [ $(hostname) = x230 ]; then
+xrandr --output DP1 --off
+xrandr --output DP2 --off
+xrandr --output DP3 --off
+xrandr --output HDMI1 --off
+xrandr --output HDMI2 --off
+xrandr --output HDMI3 --off
+xrandr --output VGA1 --off
+xrandr --output VIRTUAL1 --off
+#xrandr --output LVDS1 --dpi 125.37
+xrandr --output LVDS1 --auto
+fi
+
 xsetroot -cursor_name left_ptr
 
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
+if [ $(hostname) = pc ]; then
 exec hsetroot -root -cover ~/Pictures/EVA/neon_genesis_evangelion-3.jpg &
+fi
+if [ $(hostname) = x230 ]; then
+exec hsetroot -full ~/Pictures/CyberBooty/liliya-shafikova-1.jpg &
+fi
 exec picom --fade-in-step=0.2 --fade-out-step=0.2 --vsync --backend glx --experimental-backends --blur-method dual_kawase --blur-strength 5 &
 exec xbanish &
+if [ $(hostname) = x230 ]; then
+exec dunst &
+fi
 exec autocutsel &
 exec autocutsel -selection PRIMARY &
 exec sxhkd ~/.config/sxhkd/bspwm_sxhkdrc &
