@@ -21,11 +21,11 @@
 
 [tasks.nvim]
 	links = [
-		[".config/nvim/init.vim", "nvim/home/init.vim"],
-		[".config/nvim/config", "nvim/home/config"],
-		[".config/nvim/ftplugin", "nvim/home/ftplugin"],
-		[".config/nvim/lua", "nvim/home/lua"],
-		[".config/nvim/snippets", "nvim/home/snippets"],
+		[".config/nvim/init.vim", "nvim/init.vim"],
+		[".config/nvim/config", "nvim/config"],
+		[".config/nvim/ftplugin", "nvim/ftplugin"],
+		[".config/nvim/lua", "nvim/lua"],
+		[".config/nvim/snippets", "nvim/snippets"],
 	]
 
 [tasks.peaclock]
