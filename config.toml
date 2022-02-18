@@ -6,6 +6,8 @@
 [tasks.bspwm]
 	links = [
 		[".config/bspwm/bspwmrc", "bspwm/home/bspwmrc"],
+		[".config/sxhkd/sxhkdrc", "sxhkd/sxhkdrc"],
+		[".config/sxhkd/bspwm_sxhkdrc", "sxhkd/bspwm_sxhkdrc"],
 	]
 
 [tasks.Disable_ECC]
