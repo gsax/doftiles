@@ -44,6 +44,6 @@ bspc rule -a Emacs state=tiled
 bspc rule -a 'Double Commander:doublecmd:Options' state=floating
 bspc rule -a KeePassXC desktop=''
 if [ $(hostname) = pc ]; then
-	bspc rule -a Ferdi desktop=''
+	bspc rule -a Ferdium desktop=''
 	bspc rule -a Signal desktop=''
 fi
