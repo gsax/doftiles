@@ -1,0 +1,11 @@
+# Default
+efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Obarun" -l \vmlinuz-linux -u "cryptdevice=UUID=ab9f6604-3037-4f8e-bfc2-f1d5bb4c1da4:cryptroot root=/dev/mapper/cryptroot rootfstype=btrfs rootflags=subvol=system/obarun ro noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off tsx=on tsx_async_abort=off mitigations=off fsck.mode=skip initrd=\intel-ucode.img initrd=\initramfs-linux.img"
+
+# With Mitigations
+efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Obarun Mitigations" -l \vmlinuz-linux -u "cryptdevice=UUID=ab9f6604-3037-4f8e-bfc2-f1d5bb4c1da4:cryptroot root=/dev/mapper/cryptroot rootfstype=btrfs rootflags=subvol=system/obarun ro initrd=\intel-ucode.img initrd=\initramfs-linux.img"
+
+# Fallback
+efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Obarun Fallback" -l \vmlinuz-linux -u "cryptdevice=UUID=ab9f6604-3037-4f8e-bfc2-f1d5bb4c1da4:cryptroot root=/dev/mapper/cryptroot rootfstype=btrfs rootflags=subvol=system ro noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off tsx=on tsx_async_abort=off mitigations=off fsck.mode=skip initrd=\intel-ucode.img initrd=\initramfs-linux-fallback.img"
+
+# Fallback Mitigations
+efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Obarun Fallback Mitigations" -l \vmlinuz-linux -u "cryptdevice=UUID=ab9f6604-3037-4f8e-bfc2-f1d5bb4c1da4:cryptroot root=/dev/mapper/cryptroot rootfstype=btrfs rootflags=subvol=system ro initrd=\intel-ucode.img initrd=\initramfs-linux-fallback.img"
