@@ -15,6 +15,12 @@
 		["/etc/modprobe.d/edac-blacklist.conf", "Disable_ECC/edac-blacklist.conf"],
 	]
 
+[tasks.joplin]
+	links = [
+		[".config/joplin/keymap.json", "joplin/keymap.json"],
+		[".config/joplin/settings.json", "joplin/settings.json"],
+	]
+
 [tasks.neomutt]
 	links = [
 		[".config/neomutt/neomuttrc", "neomutt/home/neomuttrc"],
