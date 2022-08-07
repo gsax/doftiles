@@ -42,7 +42,7 @@ xsetroot -cursor_name left_ptr
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 if [ $(hostname) = pc ]; then
-exec hsetroot -root -cover ~/Pictures/EVA/neon_genesis_evangelion-3.jpg &
+exec hsetroot -root -cover ~/media/14/Pictures/EVA/neon_genesis_evangelion-3.jpg &
 fi
 if [ $(hostname) = x230 ]; then
 exec hsetroot -full ~/Pictures/CyberBooty/liliya-shafikova-1.jpg &
