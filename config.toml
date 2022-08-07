@@ -71,6 +71,13 @@
 		[".config/vdirsyncer/get_pass.sh", "vdirsyncer/get_pass.sh"],
 	]
 
+[tasks.vifm]
+	links = [
+		[".config/vifm/vifmrc", "vifm/vifmrc"],
+		[".config/vifm/icons.vim", "vifm/icons.vim"],
+		[".config/vifm/colors", "/usr/share/vifm/colors"],
+	]
+
 [tasks.X]
 	links = [
 		[".Xresources", "X/home/Xresources"],
