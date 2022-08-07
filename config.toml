@@ -50,7 +50,8 @@
 
 [tasks.ranger]
 	links = [
-		[".config/ranger/rc.conf", "ranger/home/rc.conf"],
+		[".config/ranger/rc.conf", "ranger/rc.conf"],
+		[".config/ranger/plugins/ranger_devicons", "ranger/ranger_devicons"],
 	]
 
 [tasks.stylua]
