@@ -109,7 +109,6 @@
 		[".config/zsh/zlogin", "zsh/home/zlogin"],
 		[".config/zsh/.zlogout", "zsh/home/zlogout"],
 		[".config/zsh/zlogout", "zsh/home/zlogout"],
-		[".config/zsh/plugins", "zsh/home/plugins/"],
 	]
 
 [tasks.zsh_global]
