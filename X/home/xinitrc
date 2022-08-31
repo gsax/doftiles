@@ -47,7 +47,7 @@ fi
 if [ $(hostname) = x230 ]; then
 exec hsetroot -full ~/Pictures/CyberBooty/liliya-shafikova-1.jpg &
 fi
-exec picom --fade-in-step=0.2 --fade-out-step=0.2 --vsync --backend glx --experimental-backends --blur-method dual_kawase --blur-strength 5 &
+exec picom --fade-in-step=0.2 --fade-out-step=0.2 --vsync --backend glx --blur-method dual_kawase --blur-strength 5 &
 exec xbanish &
 if [ $(hostname) = x230 ]; then
 exec dunst &
