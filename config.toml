@@ -92,6 +92,12 @@
 		["/etc/X11/xorg.conf.d/20-security.conf", "etc/xorg.conf.d/20-security.conf"],
 	]
 
+[tasks.wezterm]
+	links = [
+		[".config/wezterm/wezterm.lua", "wezterm/wezterm.lua"],
+		[".config/wezterm/dracula.lua", "wezterm/dracula.lua"],
+	]
+
 [tasks.yay]
 	links = [
 		[".config/yay/config.json", "yay/config.json"],

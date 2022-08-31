@@ -4,12 +4,12 @@ local act = wezterm.action
 return {
    -- multiplexing
    -- it's currently very laggy
-   -- unix_domains = {
-      -- {
-      -- name = 'unix',
-      -- },
-   -- },
-   -- default_gui_startup_args = { 'connect', 'unix' },
+   unix_domains = {
+      {
+      name = 'unix',
+      },
+   },
+   default_gui_startup_args = { 'connect', 'unix' },
 
    -- appearance
    font = wezterm.font('Terminus'),
