@@ -29,8 +29,7 @@
 
 [tasks.nvim]
 	links = [
-		[".config/nvim/init.vim", "nvim/init.vim"],
-		[".config/nvim/config", "nvim/config"],
+		[".config/nvim/init.lua", "nvim/init.lua"],
 		[".config/nvim/ftplugin", "nvim/ftplugin"],
 		[".config/nvim/lua", "nvim/lua"],
 		[".config/nvim/snippets", "nvim/snippets"],
