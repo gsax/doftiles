@@ -1,5 +1,5 @@
 [tasks.alacritty]
-	links = [
+	templates = [
 		[".config/alacritty/alacritty.yml", "alacritty/home/alacritty.yml"],
 	]
 
