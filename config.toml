@@ -23,8 +23,10 @@
 
 [tasks.neomutt]
 	links = [
-		[".config/neomutt/neomuttrc", "neomutt/home/neomuttrc"],
-		[".config/neomutt/mailsignature", "neomutt/home/mailsignature"],
+		[".config/neomutt/neomuttrc", "neomutt/neomuttrc"],
+		[".config/neomutt/gsx.rc", "neomutt/gsx.rc"],
+		[".config/neomutt/black-neon.rc", "neomutt/black-neon.rc"],
+		[".config/neomutt/mailsignature", "neomutt/mailsignature"],
 	]
 
 [tasks.nvim]

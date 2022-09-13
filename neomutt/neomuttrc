@@ -1,9 +1,6 @@
 # imap settings
 # set mailboxpaths
-set imap_user="`gpg -qd ~/.config/neomutt/gsx.gpg | grep imap_user | cut -d ' ' -f2`"
-set imap_pass="`gpg -qd ~/.config/neomutt/gsx.gpg | grep imap_pass | cut -d ' ' -f2`"
-set spoolfile="`gpg -qd ~/.config/neomutt/gsx.gpg | grep spoolfile | cut -d ' ' -f2`"
-set folder="`gpg -qd ~/.config/neomutt/gsx.gpg | grep folder | cut -d ' ' -f2`"
+source "~/.config/neomutt/gsx.rc"
 set record="+Sent"
 set postponed="+Drafts"
 set trash="+Trash"
@@ -102,6 +99,10 @@ set smime_keys="~/.local/share/neomutt/smime_keys"
 # show HTML-mails
 alternative_order text/plain text/enriched text/html
 #auto_view text/html
+
+# switch imap accounts
+macro index <f4> '<sync-mailbox><enter-command>source ~/.config/neomutt/gsx.rc<enter><change-folder>!<enter>'
+macro index <f5> '<sync-mailbox><enter-command>source ~/.config/neomutt/black-neon.rc<enter><change-folder>!<enter>'
 
 # adressbook
 set query_command="khard email --parsable"
