@@ -4,16 +4,22 @@ local act = wezterm.action
 return {
    -- multiplexing
    -- it's currently very laggy
-   unix_domains = {
-      {
-      name = 'unix',
-      },
-   },
-   default_gui_startup_args = { 'connect', 'unix' },
+   -- unix_domains = {
+      -- {
+      -- name = 'unix',
+      -- },
+   -- },
+   -- default_gui_startup_args = { 'connect', 'unix' },
+
+   -- use kitty keyboard protocoll
+   enable_kitty_keyboard = true,
+
+   -- work's better with tiling WMs
+   adjust_window_size_when_changing_font_size = false,
 
    -- appearance
    font = wezterm.font('Terminus'),
-   font_size = 16,
+   font_size = 12,
 
    scrollback_lines = 100000,
    enable_scroll_bar = false,
