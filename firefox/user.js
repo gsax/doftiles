@@ -95,7 +95,7 @@ user_pref("signon.generation.enabled", false);
 user_pref("signon.importedFromSqlite", true);
 user_pref("signon.rememberSignons", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-user_pref("toolkit.telemetry.pioneer-new-studies-available", true);
+user_pref("toolkit.telemetry.pioneer-new-studies-available", false);
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("trailhead.extendedTriplets.experiment", "control");
 user_pref("trailhead.firstrun.didSeeAboutWelcome", true);
