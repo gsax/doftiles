@@ -1,0 +1,12 @@
+[user]
+	name = Georg Sachs
+	email = gsx@protaisn.org
+	signingkey = 8A3D3173096D160B8FE5C6ABBE0A1B11ED41DD27
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true

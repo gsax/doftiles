@@ -15,6 +15,11 @@
 		["/etc/modprobe.d/edac-blacklist.conf", "Disable_ECC/edac-blacklist.conf"],
 	]
 
+[tasks.git]
+	links = [
+		[".config/git/config", "git/config"],
+	]
+
 [tasks.joplin]
 	links = [
 		[".config/joplin/keymap.json", "joplin/keymap.json"],
