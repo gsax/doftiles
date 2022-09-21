@@ -20,6 +20,12 @@
 		[".config/git/config", "git/config"],
 	]
 
+[tasks.gnupg]
+	links = [
+		[".gnupg/gpg.conf", "gnupg/gpg.conf"],
+		[".gnupg/gpg-agent.conf", "gnupg/gpg-agent.conf"],
+	]
+
 [tasks.joplin]
 	links = [
 		[".config/joplin/keymap.json", "joplin/keymap.json"],
