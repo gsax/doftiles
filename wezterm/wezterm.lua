@@ -1,5 +1,18 @@
 local wezterm = require('wezterm')
 local act = wezterm.action
+local hostname = wezterm.hostname()
+
+-- set font depending on which machine we are running
+local font_size
+local font_type
+if hostname == 'pc' then
+   font_size = 16
+   font_type = 'Terminus'
+   -- font_type = 'JetBrains Mono'
+else
+   font_size = 12
+   font_type = 'Terminus'
+end
 
 return {
    -- multiplexing
@@ -18,8 +31,11 @@ return {
    adjust_window_size_when_changing_font_size = false,
 
    -- appearance
-   font = wezterm.font('Terminus'),
-   font_size = 12,
+   -- font = wezterm.font('Terminus'),
+   font = wezterm.font(font_type),
+   font_size = font_size,
+   -- disable ligatures
+   -- harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 
    scrollback_lines = 100000,
    enable_scroll_bar = false,
