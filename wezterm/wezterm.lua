@@ -49,9 +49,9 @@ return {
    text_background_opacity = 0.9,
 
    window_padding = {
-      left = 3,
-      right = 3,
-      top = 5,
+      left = 6,
+      right = 0,
+      top = 0,
       bottom = 0,
    },
 
@@ -146,7 +146,7 @@ return {
             -- Specify whether you want "Half", "Normal" or "Bold" intensity for the
             -- label shown for this tab.
             -- The default is "Normal"
-            intensity = 'Normal',
+            intensity = 'Half',
 
             -- Specify whether you want "None", "Single" or "Double" underline for
             -- label shown for this tab.
@@ -166,6 +166,7 @@ return {
          inactive_tab = {
             bg_color = colors.bg,
             fg_color = colors.blue,
+            intensity = 'Half',
 
             -- The same options that were listed under the `active_tab` section above
             -- can also be used for `inactive_tab`.
@@ -175,6 +176,7 @@ return {
          new_tab = {
             bg_color = colors.bg,
             fg_color = colors.blue,
+            intensity = 'Half',
 
             -- The same options that were listed under the `active_tab` section above
             -- can also be used for `new_tab`.
