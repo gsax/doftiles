@@ -8,7 +8,8 @@ local font_size
 local font_type
 if hostname == 'pc' then
    font_size = 16
-   font_type = 'Terminus'
+   -- font_type = 'Terminus'
+   font_type = 'Terminess TTF Nerd Font Mono'
    -- font_type = 'JetBrains Mono'
 else
    font_size = 12
