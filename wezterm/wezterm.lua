@@ -20,11 +20,23 @@ return {
    -- multiplexing
    -- it's currently very laggy
    -- unix_domains = {
-      -- {
-      -- name = 'unix',
-      -- },
+   -- {
+   -- name = 'unix',
+   -- },
    -- },
    -- default_gui_startup_args = { 'connect', 'unix' },
+   -- ssh_domains = {
+   -- {
+   -- -- This name identifies the domain
+   -- name = 'ssh',
+   -- -- The hostname or address to connect to. Will be used to match settings
+   -- -- from your ssh config file
+   -- remote_address = '::1',
+   -- -- The username to use on the remote host
+   -- username = 'gsx',
+   -- },
+   -- },
+   -- default_gui_startup_args = { 'connect', 'ssh' },
 
    -- use kitty keyboard protocoll
    enable_kitty_keyboard = true,
@@ -49,8 +61,8 @@ return {
    text_background_opacity = 0.9,
 
    window_padding = {
-      left = 6,
-      right = 0,
+      left = 3,
+      right = 3,
       top = 0,
       bottom = 0,
    },
@@ -191,29 +203,19 @@ return {
    -- keymappings
    keys = {
       -- clipboard
-      { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom 'Clipboard', },
-      { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom 'PrimarySelection', },
+      { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom('Clipboard') },
+      { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom('PrimarySelection') },
 
       -- control panes
-      {
-         key = 'v',
-         mods = 'LEADER',
-         action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
-      },
-      {
-         key = 's',
-         mods = 'LEADER',
-         action = act.SplitVertical({
-            domain = 'CurrentPaneDomain',
-         }),
-      },
-      { key = 'h', mods = 'LEADER', action = act.ActivatePaneDirection 'Left', },
-      { key = 'j', mods = 'LEADER', action = act.ActivatePaneDirection 'Down', },
-      { key = 'k', mods = 'LEADER', action = act.ActivatePaneDirection 'Up', },
-      { key = 'l', mods = 'LEADER', action = act.ActivatePaneDirection 'Right', },
+      { key = 'v', mods = 'LEADER', action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }) },
+      { key = 's', mods = 'LEADER', action = act.SplitVertical({ domain = 'CurrentPaneDomain' }) },
+      { key = 'h', mods = 'LEADER', action = act.ActivatePaneDirection('Left') },
+      { key = 'j', mods = 'LEADER', action = act.ActivatePaneDirection('Down') },
+      { key = 'k', mods = 'LEADER', action = act.ActivatePaneDirection('Up') },
+      { key = 'l', mods = 'LEADER', action = act.ActivatePaneDirection('Right') },
 
       -- control tabs
-      { key = 'c', mods = 'LEADER', action = act.SpawnTab("CurrentPaneDomain") },
+      { key = 'c', mods = 'LEADER', action = act.SpawnTab('CurrentPaneDomain') },
       { key = 'g', mods = 'LEADER', action = act.ActivateLastTab },
       { key = 'n', mods = 'LEADER', action = act.ActivateTabRelative(1) },
       { key = 'p', mods = 'LEADER', action = act.ActivateTabRelative(-1) },
@@ -228,10 +230,6 @@ return {
       { key = '9', mods = 'LEADER', action = act.ActivateTab(8) },
       { key = '0', mods = 'LEADER', action = act.ActivateTab(9) },
       -- Send "CTRL-S" to the terminal when pressing CTRL-S, CTRL-S
-      {
-         key = 's',
-         mods = 'LEADER|CTRL',
-         action = wezterm.action.SendString('\x01'),
-      },
+      { key = 's', mods = 'LEADER|CTRL', action = wezterm.action.SendString('\x01') },
    },
 }
