@@ -1,6 +1,7 @@
 local wezterm = require('wezterm')
 local act = wezterm.action
 local hostname = wezterm.hostname()
+local colors = require('palette')
 
 -- set font depending on which machine we are running
 local font_size
@@ -55,19 +56,19 @@ return {
 
    colors = {
       -- The default text color
-      foreground = '#f8f8f2',
+      foreground = colors.fg,
       -- The default background color
-      background = '#181a26',
+      background = colors.bg,
 
       -- Overrides the cell background color when the current cell is occupied by the
       -- cursor and the cursor style is set to Block
-      cursor_bg = '#00fa3f',
+      cursor_bg = colors.green,
       -- Overrides the text color when the current cell is occupied by the cursor
-      cursor_fg = '#181a26',
+      cursor_fg = colors.bg,
       -- Specifies the border color of the cursor when the cursor style is set to Block,
       -- or the color of the vertical or horizontal bar when the cursor style is set to
       -- Bar or Underline.
-      cursor_border = '#f8f8f2',
+      cursor_border = colors.fg,
 
       -- the foreground color of selected text
       selection_fg = 'none',
@@ -75,30 +76,30 @@ return {
       selection_bg = 'rgba(68,71,90,0.5)',
 
       -- The color of the scrollbar "thumb"; the portion that represents the current viewport
-      scrollbar_thumb = '#44475a',
+      scrollbar_thumb = colors.selection,
 
       -- The color of the split lines between panes
-      split = '#6272a4',
+      split = colors.comment,
 
       ansi = {
-         '#000000', -- black
-         '#ff5555', -- red
-         '#00fa3f', -- green
-         '#bffa35', -- yellow
-         '#c153f9', -- blue
-         '#ff24a2', -- magenta
-         '#26d7fd', -- cyan
-         '#bfbfbf', -- white
+         colors.black, -- black
+         colors.red, -- red
+         colors.green, -- green
+         colors.yellow, -- yellow
+         colors.blue, -- blue
+         colors.magenta, -- magenta
+         colors.cyan, -- cyan
+         colors.white, -- white
       },
       brights = {
-         '#4d4d4d', -- black
-         '#ff6e67', -- red
-         '#25f76b', -- green
-         '#daf97d', -- yellow
-         '#b682fa', -- blue
-         '#ff5db9', -- magenta
-         '#86e9fe', -- cyan
-         '#e6e6e6', -- white
+         colors.bright_black, -- black
+         colors.bright_red, -- red
+         colors.bright_green, -- green
+         colors.bright_yellow, -- yellow
+         colors.bright_blue, -- blue
+         colors.bright_magenta, -- magenta
+         colors.bright_cyan, -- cyan
+         colors.bright_white, -- white
       },
 
       -- Arbitrary colors of the palette in the range from 16 to 255
@@ -108,7 +109,7 @@ return {
       -- When the IME, a dead key or a leader key are being processed and are effectively
       -- holding input pending the result of input composition, change the cursor
       -- to this color to give a visual cue about the compose state.
-      compose_cursor = '#ff6e67',
+      compose_cursor = colors.bright_red,
 
       -- Colors for copy_mode and quick_select
       -- available since: nightly builds only
@@ -132,14 +133,14 @@ return {
       tab_bar = {
          -- The color of the strip that goes along the top of the window
          -- (does not apply when fancy tab bar is in use)
-         background = '#181a26',
+         background = colors.bg,
 
          -- The active tab is the one that has focus in the window
          active_tab = {
             -- The color of the background area for the tab
-            bg_color = '#181a26',
+            bg_color = colors.bg,
             -- The color of the text for the tab
-            fg_color = '#00fa3f',
+            fg_color = colors.green,
 
             -- Specify whether you want "Half", "Normal" or "Bold" intensity for the
             -- label shown for this tab.
@@ -162,8 +163,8 @@ return {
 
          -- Inactive tabs are the tabs that do not have focus
          inactive_tab = {
-            bg_color = '#181a26',
-            fg_color = '#c153f9',
+            bg_color = colors.bg,
+            fg_color = colors.blue,
 
             -- The same options that were listed under the `active_tab` section above
             -- can also be used for `inactive_tab`.
@@ -171,8 +172,8 @@ return {
 
          -- The new tab button that let you create new tabs
          new_tab = {
-            bg_color = '#181a26',
-            fg_color = '#c153f9',
+            bg_color = colors.bg,
+            fg_color = colors.blue,
 
             -- The same options that were listed under the `active_tab` section above
             -- can also be used for `new_tab`.
