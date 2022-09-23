@@ -3,17 +3,21 @@ local act = wezterm.action
 local hostname = wezterm.hostname()
 local colors = require('palette')
 
--- set font depending on which machine we are running
+-- set font and padding depending on which machine we are running
 local font_size
 local font_type
+local toppad
 if hostname == 'pc' then
    font_size = 16
-   -- font_type = 'Terminus'
-   font_type = 'Terminess TTF Nerd Font Mono'
+   -- a Pixelfont looks just more crisp in the Terminal
+   font_type = 'Terminus'
+   -- font_type = 'Terminess TTF Nerd Font Mono'
    -- font_type = 'JetBrains Mono'
+   toppad = 3
 else
    font_size = 12
    font_type = 'Terminus'
+   toppad = 0
 end
 
 return {
@@ -63,7 +67,7 @@ return {
    window_padding = {
       left = 3,
       right = 3,
-      top = 0,
+      top = toppad,
       bottom = 0,
    },
 
