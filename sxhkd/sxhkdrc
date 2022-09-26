@@ -8,11 +8,11 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -m DP-1 -matching fuzzy -sorting-method fzf -sort -combi-modi window,run -show combi -modi combi
+	rofi -m DisplayPort-0 -matching fuzzy -sorting-method fzf -sort -combi-modi window,run -show combi -modi combi
 super + o
-	rofi -m DP-1 -matching fuzzy -sorting-method fzf -sort -show run
+	rofi -m DisplayPort-0 -matching fuzzy -sorting-method fzf -sort -show run
 super + p
-	rofi -m DP-1 -matching normal -show window
+	rofi -m DisplayPort-0 -matching normal -show window
 
 # make sxhkd reload its configuration files:
 super + Escape

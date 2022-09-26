@@ -25,6 +25,10 @@ else
 	cmd="exec $@"
 fi
 
+if [ $(hostname) = pc ]; then
+xrandr --output DisplayPort-0 --mode 2560x1440 --primary --output DisplayPort-1 --mode 2560x1440 --left-of DisplayPort-0 --output DisplayPort-2 --mode 2560x1440 --right-of DisplayPort-0
+fi
+
 if [ $(hostname) = x230 ]; then
 xrandr --output DP1 --off
 xrandr --output DP2 --off
