@@ -1,19 +1,19 @@
 #!/usr/bin/bash
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
+	for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+		[ -x "$f" ] && . "$f"
+	done
+	unset f
 fi
 
-#list=( $(ls -1 /home/gsx/.66/conf/svscan@gsx) )
-#for i in ${list[@]};do
-#    var=$(</home/gsx/.66/conf/svscan@gsx/${i})
-#    for j in ${var[@]}; do
-#		export ${j}
-#    done
-#done
+list=( $(ls -1 /home/gsx/.66/conf/svscan@gsx) )
+for i in ${list[@]};do
+	var=$(</home/gsx/.66/conf/svscan@gsx/${i})
+	for j in ${var[@]}; do
+		export ${j}
+	done
+done
 
 
 66-all up
@@ -26,19 +26,21 @@ else
 fi
 
 if [ $(hostname) = pc ]; then
-xrandr --output DisplayPort-0 --mode 2560x1440 --primary --output DisplayPort-1 --mode 2560x1440 --left-of DisplayPort-0 --output DisplayPort-2 --mode 2560x1440 --right-of DisplayPort-0
+	xrandr --output DisplayPort-0 --mode 2560x1440 --primary
+	xrandr --output DisplayPort-1 --mode 2560x1440 --left-of DisplayPort-0
+	xrandr --output DisplayPort-2 --mode 2560x1440 --right-of DisplayPort-0
 fi
 
 if [ $(hostname) = x230 ]; then
-xrandr --output DP1 --off
-xrandr --output DP2 --off
-xrandr --output DP3 --off
-xrandr --output HDMI1 --off
-xrandr --output HDMI2 --off
-xrandr --output HDMI3 --off
-xrandr --output VGA1 --off
-xrandr --output VIRTUAL1 --off
-xrandr --output LVDS1 --auto
+	xrandr --output DP1 --off
+	xrandr --output DP2 --off
+	xrandr --output DP3 --off
+	xrandr --output HDMI1 --off
+	xrandr --output HDMI2 --off
+	xrandr --output HDMI3 --off
+	xrandr --output VGA1 --off
+	xrandr --output VIRTUAL1 --off
+	xrandr --output LVDS1 --auto
 fi
 
 xsetroot -cursor_name left_ptr
@@ -46,15 +48,15 @@ xsetroot -cursor_name left_ptr
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 if [ $(hostname) = pc ]; then
-exec hsetroot -root -cover ~/media/14/Pictures/EVA/neon_genesis_evangelion-3.jpg &
+	exec hsetroot -root -cover ~/media/14/Pictures/EVA/neon_genesis_evangelion-3.jpg &
 fi
 if [ $(hostname) = x230 ]; then
-exec hsetroot -full ~/Pictures/CyberBooty/liliya-shafikova-1.jpg &
+	exec hsetroot -full ~/Pictures/CyberBooty/liliya-shafikova-1.jpg &
 fi
 exec picom --fade-in-step=0.2 --fade-out-step=0.2 --vsync --backend glx --blur-method dual_kawase --blur-strength 5 &
 exec xbanish &
 if [ $(hostname) = x230 ]; then
-exec dunst &
+	exec dunst &
 fi
 exec autocutsel &
 exec autocutsel -selection PRIMARY &
