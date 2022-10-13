@@ -6,7 +6,10 @@ local colors = require('palette')
 -- set font and padding depending on which machine we are running
 local font_size
 local font_type
+-- local leftpad
+-- local rightpad
 local toppad
+-- local bottompad
 if hostname == 'pc' then
    font_size = 16
    -- a Pixelfont looks just more crisp in the Terminal
@@ -42,6 +45,9 @@ return {
    -- },
    -- default_gui_startup_args = { 'connect', 'ssh' },
 
+   -- don't start zsh as login shell
+   default_prog = { '/usr/bin/zsh' },
+
    -- use kitty keyboard protocoll
    enable_kitty_keyboard = true,
 
@@ -60,6 +66,7 @@ return {
 
    use_fancy_tab_bar = false,
    tab_bar_at_bottom = true,
+   hide_tab_bar_if_only_one_tab = true,
 
    window_background_opacity = 0.9,
    text_background_opacity = 0.9,
