@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Make a snapshot before changing the system
+Depends = btrbk
+When = PreTransaction
+Exec = /usr/bin/btrbk run update

@@ -53,11 +53,6 @@
 		["/etc/profile.d/keychain.sh", "keychain/keychain.sh"],
 	]
 
-[tasks.makepkg]
-	links = [
-		["/etc/makepkg.conf", "makepkg/makepkg.conf"],
-	]
-
 [tasks.neomutt]
 	links = [
 		[".config/neomutt/neomuttrc", "neomutt/neomuttrc"],
@@ -72,6 +67,14 @@
 		[".config/nvim/ftplugin", "nvim/ftplugin"],
 		[".config/nvim/lua", "nvim/lua"],
 		[".config/nvim/snippets", "nvim/snippets"],
+	]
+
+[tasks.pacman]
+	links = [
+		["/etc/makepkg.conf", "pacman/arch/makepkg.conf"],
+		["/etc/pacman.conf", "pacman/arch/pacman.conf"],
+		["/etc/pacman.d/hooks/btrbk.hook", "pacman/hooks/btrbk.hook"],
+		["/etc/pacman.d/hooks/refind.hook", "pacman/hooks/refind.hook"],
 	]
 
 [tasks.peaclock]
