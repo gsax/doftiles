@@ -90,6 +90,12 @@
 	links = [
 		[".config/sway/config", "sway/config"],
 	]
+
+[tasks.sway_global]
+	links = [
+		["/etc/profile.d/wayland.sh", "sway/profile.d/wayland.sh"],
+	]
+
 [tasks.tmux]
 	links = [
 		[".config/tmux/tmux.conf", "tmux/home/tmux.conf"],
