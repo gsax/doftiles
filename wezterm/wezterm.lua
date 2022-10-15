@@ -18,8 +18,11 @@ if hostname == 'pc' then
    -- font_type = 'JetBrains Mono'
    toppad = 3
 else
-   font_size = 12
-   font_type = 'Noto Sans Mono'
+   font_size = 11
+   font_type = 'JetBrains Mono'
+   -- font_type = 'Noto Sans Mono'
+   -- font_type = 'Source Code Pro'
+   -- font_type = 'Terminus'
    toppad = 0
 end
 
@@ -59,7 +62,7 @@ return {
    font = wezterm.font(font_type),
    font_size = font_size,
    -- disable ligatures
-   -- harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
+   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 
    scrollback_lines = 100000,
    enable_scroll_bar = false,
