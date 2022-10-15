@@ -99,6 +99,7 @@
 [tasks.sway]
 	links = [
 		[".config/sway/config", "sway/config"],
+		[".Xresources", "X/home/Xresources"],
 	]
 
 [tasks.sway_global]
