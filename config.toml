@@ -80,6 +80,10 @@
 		[".config/stylua/stylua.toml", "stylua/stylua.toml"],
 	]
 
+[tasks.sway]
+	links = [
+		[".config/sway/config", "sway/config"],
+	]
 [tasks.tmux]
 	links = [
 		[".config/tmux/tmux.conf", "tmux/home/tmux.conf"],

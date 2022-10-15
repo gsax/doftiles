@@ -1,0 +1,5 @@
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * bg /home/gsx/Pictures/88/_s_p_a_c_e____o_u_t__by_vashperado_d4dn7sa.jpg fill
+
