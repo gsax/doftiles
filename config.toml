@@ -10,6 +10,16 @@
 		[".config/sxhkd/bspwm_sxhkdrc", "sxhkd/bspwm_sxhkdrc"],
 	]
 
+[tasks.contacts]
+	links = [
+		[".config/vdirsyncer/config", "vdirsyncer/config"],
+		[".config/vdirsyncer/get_url.sh", "vdirsyncer/get_url.sh"],
+		[".config/vdirsyncer/get_user.sh", "vdirsyncer/get_user.sh"],
+		[".config/vdirsyncer/get_pass.sh", "vdirsyncer/get_pass.sh"],
+		[".config/khal/config", "khal/config"],
+		[".config/khard/khard.conf", "khard/khard.conf"],
+	]
+
 [tasks.Disable_ECC]
 	links = [
 		["/etc/modprobe.d/edac-blacklist.conf", "Disable_ECC/edac-blacklist.conf"],
@@ -74,14 +84,6 @@
 [tasks.tmux]
 	links = [
 		[".config/tmux/tmux.conf", "tmux/home/tmux.conf"],
-	]
-
-[tasks.vdirsyncer]
-	links = [
-		[".config/vdirsyncer/config", "vdirsyncer/config"],
-		[".config/vdirsyncer/get_url.sh", "vdirsyncer/get_url.sh"],
-		[".config/vdirsyncer/get_user.sh", "vdirsyncer/get_user.sh"],
-		[".config/vdirsyncer/get_pass.sh", "vdirsyncer/get_pass.sh"],
 	]
 
 [tasks.vifm]
