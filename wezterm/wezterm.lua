@@ -19,7 +19,7 @@ if hostname == 'pc' then
    toppad = 3
 else
    font_size = 12
-   font_type = 'Terminus'
+   font_type = 'Noto Sans Mono'
    toppad = 0
 end
 
