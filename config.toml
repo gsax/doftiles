@@ -47,6 +47,11 @@
 		[".config/joplin/keymap.json", "joplin/keymap.json"],
 	]
 
+[tasks.keychain]
+	links = [
+		["/etc/profile.d/keychain.sh", "keychain/keychain.sh"],
+	]
+
 [tasks.neomutt]
 	links = [
 		[".config/neomutt/neomuttrc", "neomutt/neomuttrc"],
