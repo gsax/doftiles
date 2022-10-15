@@ -52,6 +52,11 @@
 		["/etc/profile.d/keychain.sh", "keychain/keychain.sh"],
 	]
 
+[tasks.makepkg]
+	links = [
+		["/etc/makepkg.conf", "makepkg/makepkg.conf"],
+	]
+
 [tasks.neomutt]
 	links = [
 		[".config/neomutt/neomuttrc", "neomutt/neomuttrc"],
