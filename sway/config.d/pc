@@ -1,0 +1,8 @@
+### Output configuration
+#
+output DP-1 pos 0 0 res 2560x1440
+output DP-2 pos -2560 0 res 2560x1440
+output DP-3 pos 2560 0 res 2560x1440
+
+output * bg /home/gsx/Pictures/88/_s_p_a_c_e____o_u_t__by_vashperado_d4dn7sa.jpg fill
+
