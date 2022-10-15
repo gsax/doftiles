@@ -13,9 +13,9 @@ local toppad
 if hostname == 'pc' then
    font_size = 16
    -- a Pixelfont looks just more crisp in the Terminal
-   font_type = 'Terminus'
+   -- font_type = 'Terminus'
    -- font_type = 'Terminess TTF Nerd Font Mono'
-   -- font_type = 'JetBrains Mono'
+   font_type = 'JetBrains Mono'
    toppad = 3
 else
    font_size = 11
