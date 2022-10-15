@@ -36,10 +36,11 @@
 		[".gnupg/gpg-agent.conf", "gnupg/gpg-agent.conf"],
 	]
 
-[tasks.gtk]
+[tasks.gui-libraries]
   links = [
 	  [".config/gtk-3.0/settings.ini", "gtk/gtk-3.0/settings.ini"],
 	  [".config/gtkrc-2.0", "gtk/gtkrc-2.0"],
+	  [".config/Kvantum/kvantum.kvconfig", "qt/kvantum.kvconfig"],
 	]
 
 [tasks.joplin]
