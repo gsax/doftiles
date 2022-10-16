@@ -168,7 +168,7 @@ font:
   #size: 16.0
   #size: 18.5
 {{ if eq .Env.HOST "x230" }}
-  size: 9.5
+  size: 11
 {{ else }}
   size: 10.0
 {{ end }}
