@@ -77,6 +77,7 @@
 [tasks.pacman]
 	templates = [
 		["/etc/makepkg.conf", "pacman/arch/makepkg.conf"],
+		["/etc/mkinitcpio.conf", "pacman/arch/mkinitcpio.conf"],
 		["/etc/pacman.conf", "pacman/arch/pacman.conf"],
 		["/etc/pacman.d/hooks/btrbk.hook", "pacman/hooks/btrbk.hook"],
 		["/etc/pacman.d/hooks/refind.hook", "pacman/hooks/refind.hook"],
