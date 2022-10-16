@@ -8,14 +8,14 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term wezterm
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-for_window [app_id="^LAUNCHER$"] floating enable, sticky enable, resize set 30 ppt 40 ppt, border pixel 1
+for_window [app_id="^LAUNCHER$"] floating enable, sticky enable, resize set 10 ppt 40 ppt, border pixel 1
 for_window [app_id="^WINDOW-SWITCHER$"] floating enable, sticky enable, resize set 60 ppt 40 ppt, border pixel 1
-set $launcher exec alacritty --class=LAUNCHER -e /home/gsx/dev/shell/launcher.sh
-set $window-switcher exec alacritty --class=WINDOW-SWITCHER -e /home/gsx/dev/shell/window-switcher.sh
+set $launcher exec alacritty --option=font.size=16 --class=LAUNCHER -e /home/gsx/dev/shell/launcher.sh
+set $window-switcher exec alacritty --option=font.size=16 --class=WINDOW-SWITCHER -e /home/gsx/dev/shell/window-switcher.sh
 
 # hide cursor when typing
 seat * hide_cursor when-typing enable
