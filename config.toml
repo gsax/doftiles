@@ -21,7 +21,7 @@
 	]
 
 [tasks.Disable_ECC]
-	links = [
+	templates = [
 		["/etc/modprobe.d/edac-blacklist.conf", "Disable_ECC/edac-blacklist.conf"],
 	]
 
@@ -49,7 +49,7 @@
 	]
 
 [tasks.keychain]
-	links = [
+	templates = [
 		["/etc/profile.d/keychain.sh", "keychain/keychain.sh"],
 	]
 
@@ -75,11 +75,16 @@
 	]
 
 [tasks.pacman]
-	links = [
+	templates = [
 		["/etc/makepkg.conf", "pacman/arch/makepkg.conf"],
 		["/etc/pacman.conf", "pacman/arch/pacman.conf"],
 		["/etc/pacman.d/hooks/btrbk.hook", "pacman/hooks/btrbk.hook"],
 		["/etc/pacman.d/hooks/refind.hook", "pacman/hooks/refind.hook"],
+	]
+
+[tasks.pam]
+	templates = [
+		["/etc/security/faillock.conf", "pam/faillock.conf"],
 	]
 
 [tasks.peaclock]
@@ -101,7 +106,7 @@
 	]
 
 [tasks.ssh]
-	links = [
+	templates = [
 		["/etc/ssh/sshd_config", "ssh/sshd_config"],
 	]
 
@@ -117,12 +122,12 @@
 	]
 
 [tasks.sway_global]
-	links = [
+	templates = [
 		["/etc/profile.d/wayland.sh", "sway/profile.d/wayland.sh"],
 	]
 
 [tasks.sysctl]
-	links = [
+	templates = [
 		["/etc/sysctl.d/40-IPv6.conf", "sysctl/40-IPv6.conf"],
 	]
 
@@ -146,7 +151,7 @@
 	]
 
 [tasks.X_global]
-	links = [
+	templates = [
 		["/etc/X11/xorg.conf.d/10-evdev.conf", "etc/xorg.conf.d/10-evdev.conf"],
 		["/etc/X11/xorg.conf.d/20-security.conf", "etc/xorg.conf.d/20-security.conf"],
 	]
@@ -177,7 +182,7 @@
 	]
 
 [tasks.zsh_global]
-	links = [
+	templates = [
 		["/etc/zsh/zshenv", "zsh/etc/zshenv"],
 		["/etc/zsh/zshrc", "zsh/etc/zshrc"],
 		["/etc/zsh/zprofile", "zsh/etc/zprofile"],
