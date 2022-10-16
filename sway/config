@@ -25,7 +25,6 @@ exec xrdb ~/.Xresources
 
 # lock and shut down screen while ideling
 exec swayidle -w \
-    # timeout 1800 'swaylock -f' \
     timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"'
 
