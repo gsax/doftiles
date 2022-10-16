@@ -1,0 +1,33 @@
+# set $PATH
+typeset -U path
+path=(
+	/home/gsx/.local/bin
+	/home/gsx/.go/bin
+	/usr/local/bin
+	/usr/bin/core_perl
+	/usr/bin/site_perl
+	/usr/bin/vendor_perl
+	$path
+)
+
+# set $MANPATH
+typeset -U path
+manpath=(
+	/home/gsx/.local/share/man
+	$manpath
+)
+
+# set pager, editor, visual and browser variables
+PAGER=/usr/bin/less; export PAGER
+EDITOR=/usr/bin/vi; export EDITOR
+VISUAL=/usr/bin/vi; export VISUAL
+BROWSER=/usr/bin/firefox; export BROWSER
+
+# eport the hostname env variable
+export HOST
+
+# set $GOPATH
+GOPATH=~/.go; export GOPATH
+
+# set to avoid empty windows in java applications
+_JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING

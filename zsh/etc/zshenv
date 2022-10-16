@@ -1,0 +1,26 @@
+# /etc/zsh/zshenv
+
+# Set 022 for root and 077 for normal users
+if [[ "$EUID" == 0 ]] || [[ "$USER" == root ]] ; then
+	umask 022
+else
+	umask 077
+fi
+
+# Set up PATH
+PATH="${PATH}"; export PATH
+
+# Set ZDOTDIR
+#ZDOTDIR=~/.zsh; export ZDOTDIR
+ZDOTDIR=~/.config/zsh; export ZDOTDIR
+
+# set pager, editor, visual and browser variables
+PAGER=/usr/bin/less; export PAGER
+EDITOR=/usr/bin/vi; export EDITOR
+VISUAL=/usr/bin/vi; export VISUAL
+
+# Set the default theme for gtk-3
+export GTK_THEME='Dracula'
+
+# Set the default theme for qt / kvantum
+export QT_STYLE_OVERRIDE='kvantum-dark'

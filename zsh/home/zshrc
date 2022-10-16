@@ -1,0 +1,172 @@
+# Source the Environment
+
+# fzf settings
+# autocompletion
+[[ $- == *i* ]] &&
+source /usr/share/fzf/completion.zsh 2> /dev/null
+# key-bindings
+[[ -s /usr/share/fzf/key-bindings.zsh ]] &&
+source /usr/share/fzf/key-bindings.zsh
+# use fd instead of find
+[[ -x $(which fd) ]] &&
+FZF_DEFAULT_COMMAND='fd --type f'; export FZF_DEFAULT_COMMAND
+
+# stack autocompletion
+[[ -x $(which stack) ]] &&
+eval "$(stack --bash-completion-script stack)"
+
+# zsh autosuggestions
+[[ -s /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] &&
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# zsh syntax highlighting
+[[ -s /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]] &&
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+# Nobody need flow control anymore. Troublesome feature.
+setopt noflowcontrol
+
+# Fix for tmux on linux.
+case "$(uname -o)" in
+    'GNU/Linux')
+        export EVENT_NOEPOLL=1
+    ;;
+esac
+
+# Aliases and Functions
+
+# don't store su in history
+alias su=' su'
+
+# allow user to shutdown
+alias halt='sudo halt'
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
+
+# run nmap as root
+#nmap() {
+#	command sudo nmap "$@"
+#}
+#zenmap() {
+#	command sudo zenmap "$@"
+#}
+
+# run some monitoring tools as root
+iotop() {
+	command sudo iotop "$@"
+}
+hddtemp() {
+	command sudo hddtemp "$@"
+}
+pktstat() {
+	command sudo pktstat "$@"
+}
+
+# ls aliases
+alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias llh="ll -h"
+
+# clone projects from GitHub
+GitHub() {
+	command git clone 'https://github.com/'"$@"
+}
+
+# mosh connections to my uberspace webspaces
+alias uber-gsx='mosh -p 41400 gsx'
+alias uber-gsxcloud='mosh -p 41240 gsxcloud'
+alias uber-gsxtiddlywiki='mosh -p 43380 gsxtiddlywiki'
+alias uber-analspinach='mosh -p 44460 analspinach'
+
+# get help from cht.sh
+cht () {
+	command curl https://cht.sh/"$@" | less -R
+}
+
+# play folders with mpv
+Play (){
+	command fd -tf . "$@" | sort | uniq | rg -v '.*\.sh$' | xargs -d '\n' mpv
+}
+# shuffle play folders with mpv
+Shuffle (){
+	command fd -tf . "$@" | sort | uniq | shuf | rg -v '.*\.sh$' | xargs -d '\n' mpv
+}
+# cal start week with mondays
+alias cal='cal -m'
+# gcal
+gcal() {
+	command gcal --iso-week-number=yes -s1 -qDE_BY -H '\e[32m:\e[0m:\e[34m:\e[0m' "$@"
+}
+
+# don't show the banner for ffmpeg stuff
+ffmpeg () {
+	command ffmpeg -hide_banner "$@"
+}
+ffplay () {
+	command ffplay -hide_banner "$@"
+}
+ffprobe () {
+	command ffprobe -hide_banner "$@"
+}
+
+# use xdg_config_dir for peaclock
+peaclock () {
+	command peaclock --config-dir ~/.config/peaclock "$@"
+}
+
+# binary peaclock
+Peab () {
+	command peaclock --config-dir ~/.config/peaclock -u ~/.config/peaclock/binary.conf "$@"
+}
+
+# digital peaclock
+Pead () {
+	command peaclock --config-dir ~/.config/peaclock -u ~/.config/peaclock/digital.conf "$@"
+}
+
+# download videos with codecs supported by my TV
+TV-dl() {
+  command youtube-dl --restrict-filenames -f 'bestvideo[ext=mp4][fps <=30]+bestaudio[ext=m4a]/best[ext=mp4]/best' "$@"
+}
+
+Kink-dl() {
+	command aria2c --auto-file-renaming=false "$@"
+}
+
+# unpack
+unpack() {
+	setopt localoptions
+	setopt kshglob
+	local c e i
+
+	(($#)) || return
+
+	for i; do
+		c=''
+		e=1
+
+		if [[ ! -r $i ]]; then
+			echo "$0: file is unreadable: \`$i'" >&2
+			continue
+		fi
+
+		case $i in
+			*.t@(gz|lz|xz|b@(2|z?(2))|a@(z|r?(.@(Z|bz?(2)|gz|lzma|xz|zst)))))
+				c=(bsdtar xf);;
+			*.7z)  c=(7z x);;
+			*.Z)   c=(uncompress);;
+			*.bz2) c=(bunzip2);;
+			*.gz)  c=(gunzip);;
+			*.rar) c=(7z x);;
+			*.xz)  c=(unxz);;
+			*.zip) c=(unzip);;
+			*.zst) c=(unzstd);;
+			*)     echo "$0: unrecognized file extension: \`$i'" >&2
+				continue;;
+		esac
+
+		command "${c[@]}" "$i"
+		((e = e || $?))
+	done
+	return "$e"
+}

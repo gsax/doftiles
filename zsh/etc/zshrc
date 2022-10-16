@@ -1,0 +1,175 @@
+export HISTSIZE=100000
+export SAVEHIST=100000
+export HISTFILE=$ZDOTDIR/zhistory
+
+# load LS_COLORS
+eval "$(dircolors -b)"
+
+# load modules
+# colorful output
+autoload -U colors; colors
+autoload -U compinit; compinit
+autoload -U bashcompinit; bashcompinit
+
+# slashes, dots and other non alphanumeric chars delimit words
+autoload -U select-word-style
+select-word-style bash
+
+# load nslookup (wrapper around nslookup)
+autoload -U nslookup
+
+# load zargs (zsh version of xargs)
+autoload -U zargs
+
+# load zmv (mv on steroids)
+autoload -U zmv
+autoload -U zcp
+autoload -U zln
+
+# append command to history file once executed
+setopt inc_append_history
+# import new commands from the history file also in other zsh-session
+setopt share_history
+# save each command's beginning timestamp and the duration to the history file
+setopt extended_history
+# If a new command line being added to the history list duplicates an older
+# one, the older command is removed from the list
+setopt hist_ignore_all_dups
+# remove command lines from the history list when the first character on the
+# line is a space
+setopt hist_ignore_space
+# allow # before commands, so that they are not executed
+setopt interactive_comments
+
+# in order to use #, ~ and ^ for filename generation grep word
+# *~(*.gz|*.bz|*.bz2|*.zip|*.Z) -> searches for word not in compressed files
+# don't forget to quote '^', '~' and '#'!
+setopt extended_glob
+# autoremove slash
+setopt auto_remove_slash
+# don't print an error for unmatched patterns
+setopt no_nomatch
+# allow brace expansion for letters
+setopt brace_ccl
+
+# deactivate annoying beep
+setopt no_beep
+
+# use emacs style:
+bindkey -e
+
+# whenever a command completion is attempted, make sure the entire command path
+# is hashed first.
+setopt hash_list_all
+# not just at the end
+setopt complete_in_word
+
+# automatically rehash completions
+zstyle ':completion:*' rehash true
+
+# select completion from a colored menu
+zstyle ':completion:*' menu select=5
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# autocomplete PID when jobname is given
+if [[ "$EUID" == 0 ]] || [[ "$USER" == root ]] ; then
+	zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+	zstyle ':completion:*:*:kill:*' command 'ps -e -o pid,%cpu,tty,cputime,cmd'
+else
+	zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+	zstyle ':completion:*:*:kill:*' command 'ps -u$USER -o pid,%cpu,tty,cputime,cmd'
+fi
+
+# set different prompts for root and users
+setopt prompt_subst
+
+if [[ "$EUID" == 0 ]] || [[ "$USER" == root ]] ; then
+	PROMPT_SYMBOL='%F{red}%B ❮❮ %b%f'
+else
+	PROMPT_SYMBOL='%F{green}%B ❯❯ %b%f'
+fi
+
+PROMPT='%F{blue}%1~%f${PROMPT_SYMBOL}'
+
+# set right prompt
+RPROMPT="%{$fg[yellow]%}%?%{$reset_color%}"
+
+# nicer output for time
+export TIMEFMT=$'\n%J\n\nreal\t%*E\nuser\t%*U\nsys\t%*S'
+
+# support colors in less
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[04;30;32m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+export GROFF_NO_SGR=1
+
+# lets make ls a colorfull output and append file type indicators to entries
+alias ls='ls --color=auto -F --time-style=long-iso'
+
+# colorfull grep
+alias grep='grep --color=auto'
+
+# use reflinks with cp
+cp() {
+	command cp --reflink=auto "$@"
+}
+
+# make some programs colorfull with grc
+[[ -x $(which grc) ]] &&
+source /etc/zsh/grc.sh
+
+# dir control
+export DIRSTACKSIZE=10
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushd_minus
+setopt pushd_to_home
+
+# use the DIRSTACK in all sessions
+DIRSTACKFILE=$ZDOTDIR/zdirs
+if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
+	dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+	[[ -d $dirstack[1] ]] && cd $dirstack[1] && cd $OLDPWD
+fi
+chpwd() {
+	print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
+}
+
+# read the correct keys for Home, End, PgUp, PgDwn, Ins and Del
+[[ -h /etc/zsh/read_terminfo.zsh || -s /etc/zsh/read_terminfo.zsh ]] &&
+source /etc/zsh/read_terminfo.zsh
+
+# let ^Z toggle vi
+foreground-vi() {
+	fg %vi
+}
+zle -N foreground-vi
+bindkey '^Z' foreground-vi
+
+# alias for reloading zshrc
+alias reload='
+	source /etc/zsh/zshenv &&
+	source $ZDOTDIR/.zshenv &&
+	source /etc/zsh/zprofile &&
+	source $ZDOTDIR/.zprofile &&
+	source /etc/zsh/zshrc &&
+	source $ZDOTDIR/.zshrc &&
+	source /etc/zsh/zlogin &&
+	source $ZDOTDIR/.zlogin &&
+	echo "ZSH config reloaded"
+'
+
+# make sure our environment is clean regarding colors
+for color in BLUE RED GREEN CYAN YELLOW MAGENTA WHITE ; unset $color
+
+# edit GnuPG encrypted files transparent
+GPG_TTY=`tty`
+export GPG_TTY
+
+# pythonshell tab-completion
+export PYTHONSTARTUP=/etc/pythonrc
+
