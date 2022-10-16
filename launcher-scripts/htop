@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/alacritty --class=htop -e /usr/bin/htop

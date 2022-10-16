@@ -53,6 +53,12 @@
 		["/etc/profile.d/keychain.sh", "keychain/keychain.sh"],
 	]
 
+[tasks.locale]
+	templates = [
+		["/etc/locale.gen", "locale/locale.gen"],
+		["/etc/locale.conf", "locale/locale.conf"],
+	]
+
 [tasks.mpv]
   links = [
 		[".config/mpv/mpv.conf", "mpv/mpv.conf"],
@@ -120,6 +126,14 @@
 	links = [
 		[".config/sway/config", "sway/config"],
 		[".Xresources", "X/home/Xresources"],
+		[".local/launcher/ferdium", "launcher-scripts/ferdium"],
+		[".local/launcher/firefox", "launcher-scripts/firefox"],
+		[".local/launcher/htop", "launcher-scripts/htop"],
+		[".local/launcher/neomutt", "launcher-scripts/neomutt"],
+		[".local/launcher/nvtop", "launcher-scripts/nvtop"],
+		[".local/launcher/ranger", "launcher-scripts/ranger"],
+		[".local/launcher/signal", "launcher-scripts/signal"],
+		[".local/launcher/vifm", "launcher-scripts/vifm"],
 	]
 
 [tasks.sway_global]
@@ -130,6 +144,14 @@
 [tasks.sysctl]
 	templates = [
 		["/etc/sysctl.d/40-IPv6.conf", "sysctl/40-IPv6.conf"],
+	]
+
+[tasks.systemd]
+	templates = [
+		["/etc/systemd/resolved.conf", "systemd/resolved.conf"],
+		["/etc/systemd/timesyncd.conf", "systemd/timesyncd.conf"],
+		["/etc/systemd/system/btrbk.timer", "systemd/system/btrbk.timer"],
+		["/etc/systemd/system/btrbk.service", "systemd/system/btrbk.service"],
 	]
 
 [tasks.tmux]

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/alacritty --class=ranger -e /usr/bin/ranger

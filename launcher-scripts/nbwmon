@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/alacritty --class=htop -e /home/gsx/dev/c/nbwmon/build/nbwmon "$@"
