@@ -8,5 +8,5 @@ IPv6PrivacyExtensions=yes
 [DHCPv4]
 RouteMetric=20
 
-[IPv6AcceptRa]
+[IPv6AcceptRA]
 RouteMetric=20
