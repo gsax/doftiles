@@ -13,7 +13,6 @@
 [tasks.console]
 	templates = [
 		["/etc/vconsole.conf", "console/vconsole.conf"],
-		["/usr/share/kbd/consolefonts/kernel-font.psfu.gz", "console/kernel-font.psfu.gz"],
 	]
 
 [tasks.contacts]
