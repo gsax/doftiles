@@ -20,6 +20,9 @@ set $window-switcher exec alacritty --option=font.size=16 --class=WINDOW-SWITCHE
 # hide cursor when typing
 seat * hide_cursor when-typing enable
 
+# start xdg-desktop-portal
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 # load Xresources
 exec xrdb ~/.Xresources
 
