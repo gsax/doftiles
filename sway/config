@@ -75,6 +75,9 @@ input "type:keyboard" {
     # no focus follows mouse
     focus_follows_mouse no
 
+    # Switch between current and last active window
+    bindsym $mod+Tab workspace back_and_forth
+
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
