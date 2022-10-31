@@ -131,6 +131,7 @@
 [tasks.sway]
 	links = [
 		[".config/sway/config", "sway/config"],
+		[".config/swaylock/config", "swaylock/config"],
 		[".Xresources", "X/home/Xresources"],
 		[".local/launcher/ferdium", "launcher-scripts/ferdium"],
 		[".local/launcher/firefox", "launcher-scripts/firefox"],
