@@ -132,15 +132,16 @@
 	links = [
 		[".config/sway/config", "sway/config"],
 		[".config/swaylock/config", "swaylock/config"],
+		[".config/swappy/config", "swappy/config"],
 		[".Xresources", "X/home/Xresources"],
-		[".local/launcher/ferdium", "launcher-scripts/ferdium"],
 		[".local/launcher/firefox", "launcher-scripts/firefox"],
 		[".local/launcher/htop", "launcher-scripts/htop"],
 		[".local/launcher/neomutt", "launcher-scripts/neomutt"],
-		[".local/launcher/nvtop", "launcher-scripts/nvtop"],
 		[".local/launcher/ranger", "launcher-scripts/ranger"],
-		[".local/launcher/signal", "launcher-scripts/signal"],
 		[".local/launcher/vifm", "launcher-scripts/vifm"],
+		[".local/launcher/fshot", "launcher-scripts/fshot"],
+		[".local/launcher/sshot", "launcher-scripts/sshot"],
+		[".local/launcher/wshot", "launcher-scripts/wshot"],
 	]
 
 [tasks.sway_global]
