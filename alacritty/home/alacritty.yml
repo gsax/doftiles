@@ -167,11 +167,9 @@ font:
   #size: 14.0
   #size: 16.0
   #size: 18.5
-{{ if eq .Env.HOST "x230" }}
-  size: 11
-{{ else }}
+
   size: 10.0
-{{ end }}
+
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
