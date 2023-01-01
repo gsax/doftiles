@@ -49,6 +49,12 @@
 	  [".config/Kvantum/kvantum.kvconfig", "qt/kvantum.kvconfig"],
 	]
 
+[tasks.helix]
+	links = [
+		[".config/helix/config.toml", "helix/config.toml"],
+		[".config/helix/themes/dracula_transparent.toml", "helix/themes/dracula_transparent.toml"],
+	]
+
 [tasks.joplin]
 	links = [
 		[".config/joplin/keymap.json", "joplin/keymap.json"],
