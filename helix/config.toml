@@ -1,1 +1,4 @@
 theme = "dracula_transparent"
+
+[editor]
+line-number = "relative"
