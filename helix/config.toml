@@ -1,7 +1,9 @@
 theme = "gsx"
 
 [editor]
-gutters = ["diagnostics", "spacer", "diff"]
+scrolloff = 2
+gutters = ["diagnostics"]
+color-modes = true
 
 [editor.cursor-shape]
 normal = "block"
