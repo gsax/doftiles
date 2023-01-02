@@ -1,4 +1,15 @@
-theme = "dracula_transparent"
+theme = "gsx"
 
 [editor]
-line-number = "relative"
+gutters = ["diagnostics", "spacer", "diff"]
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.whitespace]
+render = "all"
+
+[editor.indent-guides]
+render = true

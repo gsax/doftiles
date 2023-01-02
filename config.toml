@@ -52,7 +52,7 @@
 [tasks.helix]
 	links = [
 		[".config/helix/config.toml", "helix/config.toml"],
-		[".config/helix/themes/dracula_transparent.toml", "helix/themes/dracula_transparent.toml"],
+		[".config/helix/themes/gsx.toml", "helix/themes/gsx.toml"],
 	]
 
 [tasks.joplin]
