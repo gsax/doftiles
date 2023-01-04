@@ -181,6 +181,17 @@
 		[".config/vifm/colors", "/usr/share/vifm/colors"],
 	]
 
+[tasks.vscode]
+	links = [
+		[".config/code-flags.conf", "vscode/code-flags.conf"],
+	]
+
+[tasks.wezterm]
+	links = [
+		[".config/wezterm/wezterm.lua", "wezterm/wezterm.lua"],
+		[".config/wezterm/dracula.lua", "wezterm/dracula.lua"],
+	]
+
 [tasks.X]
 	links = [
 		[".Xresources", "X/home/Xresources"],
@@ -192,12 +203,6 @@
 	templates = [
 		["/etc/X11/xorg.conf.d/10-evdev.conf", "etc/xorg.conf.d/10-evdev.conf"],
 		["/etc/X11/xorg.conf.d/20-security.conf", "etc/xorg.conf.d/20-security.conf"],
-	]
-
-[tasks.wezterm]
-	links = [
-		[".config/wezterm/wezterm.lua", "wezterm/wezterm.lua"],
-		[".config/wezterm/dracula.lua", "wezterm/dracula.lua"],
 	]
 
 [tasks.yay]
