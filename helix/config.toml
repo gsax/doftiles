@@ -10,8 +10,5 @@ normal = "block"
 insert = "bar"
 select = "underline"
 
-[editor.whitespace]
-render = "all"
-
 [editor.indent-guides]
 render = true

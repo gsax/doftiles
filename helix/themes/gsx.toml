@@ -1,5 +1,6 @@
-"type"              = { fg = "cyan", modifiers       = ["italic"] }
-"type.enum.variant" = { fg = "fg", modifiers = ["italic"] }
+# Syntax
+"type"              = { fg = "cyan", modifiers = ["italic"] }
+"type.enum.variant" = { fg = "fg", modifiers   = ["italic"] }
 
 "constant"                  = { fg = "blue" }
 "constant.character.escape" = { fg = "magenta" }
@@ -37,45 +38,46 @@
 "diff.minus" = { fg = "red" }
 
 # Interface
-"ui.background"          = { fg = "fg" }
-"ui.background.separator"          = { fg = "comment" }
-"ui.cursor"              = { fg = "bg", bg        = "orange", modifiers = ["dim"] }
-"ui.cursor.match"        = { modifiers      = ["underlined"] }
-"ui.cursor.primary"      = { fg = "bg", bg        = "green", modifiers   = ["dim"] }
-"ui.gutter" = { fg = "gutter_fg" }
-"ui.gutter.selected" = { fg = "fg" }
-"ui.linenr"              = { fg = "gutter_fg" }
-"ui.linenr.selected"     = { fg = "fg" }
-"ui.statusline"          = { fg = "fg", bg        = "bglight" }
-"ui.statusline.inactive" = { fg = "comment", bg           = "bgdark" }
-"ui.statusline.normal"   = { fg = "bgdark", bg   = "blue", modifiers = ["bold"] }
-"ui.statusline.insert"   = { fg = "bgdark", bg   = "green", modifiers  = ["bold"] }
-"ui.statusline.select"   = { fg = "bgdark", bg   = "magenta", modifiers   = ["bold"] }
-"ui.popup"               = { fg = "fg", bg        = "bgdark" }
-"ui.window"              = { fg = "comment" }
-"ui.help"                = { fg = "fg", bg        = "bgdark" }
-"ui.text"                = { fg = "fg" }
-"ui.text.focus"          = { fg = "cyan" }
-"ui.virtual.ruler"       = { bg = "bgdark"}
-"ui.virtual.whitespace"  = { fg = "comment" }
-"ui.menu"                = { fg = "fg", bg        = "bgdark" }
-"ui.menu.selected"       = { fg = "cyan", bg              = "bgdark" }
-"ui.selection"           = { bg = "bglighter" }
-"ui.selection.primary"   = { bg = "bglighter" }
-"ui.cursorline.primary"  = { bg = "bgdark" }
+"ui.background"           = { fg = "fg" }
+"ui.background.separator" = { fg = "comment" }
+"ui.cursor"               = { fg = "bg", bg      = "orange", modifiers  = ["dim"] }
+"ui.cursor.primary"       = { fg = "bg", bg      = "green", modifiers   = ["dim"] }
+"ui.gutter"               = { fg = "gutter_fg" }
+"ui.gutter.selected"      = { fg = "fg" }
+"ui.linenr"               = { fg = "gutter_fg" }
+"ui.linenr.selected"      = { fg = "fg" }
+"ui.statusline"           = { fg = "fg", bg      = "bglight" }
+"ui.statusline.inactive"  = { fg = "comment", bg = "bgdark" }
+"ui.statusline.normal"    = { fg = "bgdark", bg  = "blue", modifiers    = ["bold"] }
+"ui.statusline.insert"    = { fg = "bgdark", bg  = "green", modifiers   = ["bold"] }
+"ui.statusline.select"    = { fg = "bgdark", bg  = "magenta", modifiers = ["bold"] }
+"ui.popup"                = { fg = "fg", bg      = "bgdark" }
+"ui.window"               = { fg = "comment" }
+"ui.help"                 = { fg = "fg", bg      = "bgdark" }
+"ui.text"                 = { fg = "fg" }
+"ui.text.focus"           = { fg = "cyan" }
+"ui.virtual.ruler"        = { bg = "bgdark"}
+"ui.virtual.whitespace"   = { fg = "comment" }
+"ui.menu"                 = { fg = "fg", bg      = "bgdark" }
+"ui.menu.selected"        = { fg = "cyan", bg    = "bgdark" }
+"ui.selection"            = { bg = "bglighter" }
+"ui.selection.primary"    = { bg = "bglighter" }
+"ui.cursorline.primary"   = { bg = "bgdark" }
+"ui.cursor.match"         = { modifiers = ["underlined"] }
 
 # Gutter
-"hint"    = { fg = "blue", modifiers = ["bold"] }
-"info"    = { fg = "green", modifiers = ["bold"] }
+"hint"    = { fg = "blue", modifiers   = ["bold"] }
+"info"    = { fg = "green", modifiers  = ["bold"] }
 "warning" = { fg = "yellow", modifiers = ["bold"] }
-"error"   = { fg = "red", modifiers = ["bold"] }
+"error"   = { fg = "red", modifiers    = ["bold"] }
 
 # Diagnostics
-"diagnostic.hint".underline    = { fg = "blue", style = "curl" }
-"diagnostic.info".underline    = { fg = "green", style = "curl" }
+"diagnostic.hint".underline    = { fg = "blue", style   = "curl" }
+"diagnostic.info".underline    = { fg = "green", style  = "curl" }
 "diagnostic.warning".underline = { fg = "yellow", style = "curl" }
-"diagnostic.error".underline   = { fg = "red", style = "curl" }
+"diagnostic.error".underline   = { fg = "red", style    = "curl" }
 
+# Color Palette
 [palette]
 "bglighter"      = '#424450'
 "bglight"        = '#343746'
