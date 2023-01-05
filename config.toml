@@ -84,6 +84,14 @@
 		[".config/neomutt/mailsignature", "neomutt/mailsignature"],
 	]
 
+[tasks.nsxiv]
+	links = [
+		[".config/nsxiv/exec/image-info", "nsxiv/image-info"],
+		[".config/nsxiv/exec/key-handler", "nsxiv/key-handler"],
+		[".config/nsxiv/exec/thumb-info", "nsxiv/thumb-info"],
+		[".config/nsxiv/exec/win-title", "nsxiv/win-title"],
+	]
+
 [tasks.nvim]
 	links = [
 		[".config/nvim/init.lua", "nvim/init.lua"],
