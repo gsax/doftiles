@@ -31,6 +31,13 @@
 		["/etc/modprobe.d/edac-blacklist.conf", "Disable_ECC/edac-blacklist.conf"],
 	]
 
+[tasks.doom]
+	links = [
+		[".config/doom/config.el", "emacs/doom/config.el"],
+		[".config/doom/init.el", "emacs/doom/init.el"],
+		[".config/doom/packages.el", "emacs/doom/packages.el"],
+	]
+
 [tasks.git]
 	links = [
 		[".config/git/config", "git/config"],
