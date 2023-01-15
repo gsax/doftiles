@@ -104,6 +104,7 @@
 		[".config/nvim/init.lua", "nvim/init.lua"],
 		[".config/nvim/ftplugin", "nvim/ftplugin"],
 		[".config/nvim/lua", "nvim/lua"],
+		[".config/nvim/plugin", "nvim/plugin"],
 		[".config/nvim/snippets", "nvim/snippets"],
 	]
 
