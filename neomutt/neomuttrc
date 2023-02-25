@@ -36,6 +36,7 @@ set editor="vi +8"
 set mask="!^\\.[^.]"
 set move=ask-yes
 set pager_index_lines=7
+set pager_stop=yes
 set send_charset="us-ascii:utf-8"
 set signature="~/.config/neomutt/mailsignature"
 set sort=threads
