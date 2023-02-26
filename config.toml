@@ -38,6 +38,11 @@
 		[".config/doom/packages.el", "emacs/doom/packages.el"],
 	]
 
+[tasks.gdb]
+	links = [
+		[".config/gdb/gdbearlyinit", "gdb/gdbearlyinit"],
+	]
+
 [tasks.git]
 	links = [
 		[".config/git/config", "git/config"],
