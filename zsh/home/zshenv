@@ -28,6 +28,11 @@ export HOST
 
 # set $GOPATH
 GOPATH=~/.go; export GOPATH
+# reduce data send to google
+# from https://git.sr.ht/~sircmpwn/dotfiles/tree/master/item/.profile
+GOPROXY=direct; export GOPROXY
+GOSUMDB=off; export GOSUMDB
+GOTELEMETRY=off; export GOTELEMETRY
 
 # set to avoid empty windows in java applications
 _JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
