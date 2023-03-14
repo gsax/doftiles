@@ -91,6 +91,8 @@
 [tasks.mime]
   links = [
 		[".config/mimeapps.list", "mime/mimeapps.list"],
+		[".config/defaults.list", "mime/mimeapps.list"],
+		[".local/share/applications/defaults.list", "mime/mimeapps.list"],
 	]
 
 [tasks.mpv]
