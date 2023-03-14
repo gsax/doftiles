@@ -11,6 +11,11 @@
 		[".config/sxhkd/bspwm_sxhkdrc", "sxhkd/bspwm_sxhkdrc"],
 	]
 
+[tasks.chromium]
+	links = [
+		[".config/chromium-flags.conf", "chromium/chromium-flags.conf"],
+	]
+
 [tasks.console]
 	templates = [
 		["/etc/vconsole.conf", "console/vconsole.conf"],
