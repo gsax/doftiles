@@ -99,6 +99,7 @@
 		[".config/neomutt/gsx.rc", "neomutt/gsx.rc"],
 		[".config/neomutt/black-neon.rc", "neomutt/black-neon.rc"],
 		[".config/neomutt/mailsignature", "neomutt/mailsignature"],
+		[".local/share/applications/neomutt.desktop", "neomutt/neomutt.desktop"],
 	]
 
 [tasks.nsxiv]
@@ -107,6 +108,7 @@
 		[".config/nsxiv/exec/key-handler", "nsxiv/key-handler"],
 		[".config/nsxiv/exec/thumb-info", "nsxiv/thumb-info"],
 		[".config/nsxiv/exec/win-title", "nsxiv/win-title"],
+		[".local/share/applications/nsxiv.desktop", "nsxiv/nsxiv.desktop"],
 	]
 
 [tasks.nvim]
