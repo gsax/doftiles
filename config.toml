@@ -88,6 +88,11 @@
 		["/etc/locale.conf", "locale/locale.conf"],
 	]
 
+[tasks.mime]
+  links = [
+		[".config/mimeapps.list", "mime/mimeapps.list"],
+	]
+
 [tasks.mpv]
   links = [
 		[".config/mpv/mpv.conf", "mpv/mpv.conf"],
