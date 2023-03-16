@@ -60,6 +60,7 @@ user_pref("intl.accept_languages", "en-us,en-gb,en,de-de,de");
 user_pref("intl.regional_prefs.use_os_locales", true);
 user_pref("media.autoplay.default", 5);
 user_pref("media.eme.enabled", true);
+user_pref("media.peerconnection.enabled", false);
 user_pref("network.cookie.cookieBehavior", 1);
 user_pref("network.cookie.lifetimePolicy", 2);
 user_pref("network.dns.disablePrefetch", true);
