@@ -189,6 +189,14 @@ application/x-shellscript=nvim.desktop;
 # neomutt / e-mail
 x-scheme-handler/mailto=neomutt.desktop;
 
+# zoom
+application/x-zoom=Zoom.desktop;
+x-scheme-handler/callto=Zoom.desktop;
+x-scheme-handler/tel=Zoom.desktop;
+x-scheme-handler/zoommtg=Zoom.desktop;
+x-scheme-handler/zoomphonecall=Zoom.desktop;
+x-scheme-handler/zoomus=Zoom.desktop;
+
 # misc
 application/x-cmakecache=cmake-gui.desktop;
 application/x-code-workspace=code.desktop;
