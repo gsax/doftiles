@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/alacritty --class=btop -e /usr/bin/btop

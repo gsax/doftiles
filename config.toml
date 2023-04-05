@@ -178,6 +178,8 @@
 		[".Xresources", "X/home/Xresources"],
 		[".local/launcher/firefox", "launcher-scripts/firefox"],
 		[".local/launcher/htop", "launcher-scripts/htop"],
+		[".local/launcher/btop", "launcher-scripts/btop"],
+		[".local/launcher/bottom", "launcher-scripts/bottom"],
 		[".local/launcher/neomutt", "launcher-scripts/neomutt"],
 		[".local/launcher/ranger", "launcher-scripts/ranger"],
 		[".local/launcher/vifm", "launcher-scripts/vifm"],
