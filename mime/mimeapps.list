@@ -163,7 +163,7 @@ image/x-xpixmap=nsxiv.desktop;
 application/postscript=nsxiv.desktop;
 
 # ranger / file manager
-inode/directory=ranger.desktop;
+inode/directory=nnn.desktop;
 
 # khal / calendar
 text/calendar=khal.desktop;
