@@ -93,6 +93,7 @@
 		[".config/mimeapps.list", "mime/mimeapps.list"],
 		[".config/defaults.list", "mime/mimeapps.list"],
 		[".local/share/applications/defaults.list", "mime/mimeapps.list"],
+		[".local/share/dbus-1/services/filemanager.FileManager1.service", "mime/filemanager.FileManager1.service"],
 	]
 
 [tasks.mpv]
