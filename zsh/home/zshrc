@@ -96,6 +96,7 @@ Play (){
 Shuffle (){
 	command fd -tf . "$@" | sort | uniq | shuf | rg -v '.*\.sh$' | xargs -d '\n' mpv
 }
+
 # cal start week with mondays
 alias cal='cal -m'
 # gcal
@@ -133,9 +134,11 @@ Pead () {
 TV-dl() {
   command youtube-dl --restrict-filenames -f 'bestvideo[ext=mp4][fps <=30]+bestaudio[ext=m4a]/best[ext=mp4]/best' "$@"
 }
-
 Kink-dl() {
 	command aria2c --auto-file-renaming=false "$@"
+}
+YT (){
+       command yt-dlp --restrict-filenames --sleep-requests 1 --compat-options filename --abort-on-unavailable-fragment --retry-sleep fragment:exp=1:20 -c "$@"
 }
 
 # unpack
