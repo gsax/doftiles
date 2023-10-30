@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
