@@ -182,6 +182,7 @@
 		[".local/launcher/btop", "launcher-scripts/btop"],
 		[".local/launcher/bottom", "launcher-scripts/bottom"],
 		[".local/launcher/neomutt", "launcher-scripts/neomutt"],
+		[".local/launcher/neomutt", "launcher-scripts/joplin"],
 		[".local/launcher/nnn", "launcher-scripts/nnn"],
 		[".local/launcher/ranger", "launcher-scripts/ranger"],
 		[".local/launcher/vifm", "launcher-scripts/vifm"],
