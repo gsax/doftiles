@@ -18,7 +18,7 @@ manpath=(
 )
 
 # set pager, editor, visual and browser variables
-PAGER=/usr/bin/less; export PAGER
+PAGER=/usr/bin/nvimpager; export PAGER
 EDITOR=/usr/bin/vi; export EDITOR
 VISUAL=/usr/bin/vi; export VISUAL
 BROWSER=/usr/bin/firefox; export BROWSER
