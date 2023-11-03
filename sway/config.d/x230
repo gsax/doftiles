@@ -1,5 +1,5 @@
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/gsx/Pictures/88/_s_p_a_c_e____o_u_t__by_vashperado_d4dn7sa.jpg fill
+output * bg /home/gsx/Pictures/BlackLagoon/4518382-black-lagoon-sun-rays-anime-girls-pacific-ocean-pistol-palm-trees-revy.png fill
 
 # wob indicator bar
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
