@@ -192,4 +192,12 @@ client.placeholder      #181A26 #181A26 #F8F8F2 #181A26   #181A26
 
 client.background       #F8F8F2
 
+# blur
+blur enable
+blur_passes 1
+blur_radius 1
+
+# dim inactive window
+default_dim_inactive 0.1
+
 include $XDG_CONFIG_HOME/sway/config.d/*
