@@ -1,7 +1,6 @@
 # config modified from /usr/share/applications/mimeinfo.cache
 # firefox / browser
 application/json=firefox.desktop;
-application/pdf=firefox.desktop;
 application/rdf+xml=firefox.desktop;
 application/rss+xml=firefox.desktop;
 application/x-xpinstall=firefox.desktop;
@@ -14,6 +13,9 @@ text/xml=firefox.desktop;
 
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
+
+# zathura / document viewer
+application/pdf=org.pwmt.zathura.desktop;
 
 # mpv / multimedia player
 audio/3gpp=mpv.desktop;
