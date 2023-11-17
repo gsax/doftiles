@@ -36,6 +36,11 @@
 		["/etc/modprobe.d/edac-blacklist.conf", "Disable_ECC/edac-blacklist.conf"],
 	]
 
+[tasks.Disable_ME]
+	templates = [
+		["/etc/modprobe.d/mei-blacklist.conf", "Disable_ME/mei-blacklist.conf"],
+	]
+
 [tasks.doom]
 	links = [
 		[".config/doom/config.el", "emacs/doom/config.el"],
