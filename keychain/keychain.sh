@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ $EUID -ne 0 ] ; then
-	eval $(keychain -q --agents gpg --eval 8A3D3173096D160B8FE5C6ABBE0A1B11ED41DD27)
+	eval $(keychain -q --agents gpg --eval F94EBE10F06321A70109E7C574A62E84A0031125)
 fi
 
 
