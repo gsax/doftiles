@@ -3,6 +3,7 @@ typeset -U path
 path=(
 	/home/gsx/.local/bin
 	/home/gsx/.go/bin
+	/home/gsx/.cargo/bin
 	/usr/local/bin
 	/usr/bin/core_perl
 	/usr/bin/site_perl
