@@ -88,15 +88,6 @@ nsxiv (){
 	xrdb ~/.Xresources && command nsxiv "$@"
 }
 
-# play folders with mpv
-Play (){
-	command fd -tf . "$@" | sort | uniq | rg -v '.*\.sh$' | xargs -d '\n' mpv
-}
-# shuffle play folders with mpv
-Shuffle (){
-	command fd -tf . "$@" | sort | uniq | shuf | rg -v '.*\.sh$' | xargs -d '\n' mpv
-}
-
 # cal start week with mondays
 alias cal='cal -m'
 # gcal
