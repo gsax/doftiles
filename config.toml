@@ -188,6 +188,7 @@
 		[".local/launcher/btop", "launcher-scripts/btop"],
 		[".local/launcher/bottom", "launcher-scripts/bottom"],
 		[".local/launcher/neomutt", "launcher-scripts/neomutt"],
+		[".local/launcher/weechat", "launcher-scripts/weechat"],
 		[".local/launcher/nnn", "launcher-scripts/nnn"],
 		[".local/launcher/ranger", "launcher-scripts/ranger"],
 		[".local/launcher/vifm", "launcher-scripts/vifm"],
@@ -229,6 +230,32 @@
 [tasks.vscode]
 	links = [
 		[".config/code-flags.conf", "vscode/code-flags.conf"],
+	]
+
+[tasks.weechat]
+	links = [
+		[".config/weechat/alias.conf", "weechat/alias.conf"],
+		[".config/weechat/buflist.conf", "weechat/buflist.conf"],
+		[".config/weechat/charset.conf", "weechat/charset.conf"],
+		[".config/weechat/exec.conf", "weechat/exec.conf"],
+		[".config/weechat/fifo.conf", "weechat/fifo.conf"],
+		[".config/weechat/fset.conf", "weechat/fset.conf"],
+		[".config/weechat/guile.conf", "weechat/guile.conf"],
+		[".config/weechat/irc.conf", "weechat/irc.conf"],
+		[".config/weechat/logger.conf", "weechat/logger.conf"],
+		[".config/weechat/lua.conf", "weechat/lua.conf"],
+		[".config/weechat/perl.conf", "weechat/perl.conf"],
+		[".config/weechat/plugins.conf", "weechat/plugins.conf"],
+		[".config/weechat/python.conf", "weechat/python.conf"],
+		[".config/weechat/relay.conf", "weechat/relay.conf"],
+		[".config/weechat/ruby.conf", "weechat/ruby.conf"],
+		[".config/weechat/script.conf", "weechat/script.conf"],
+		[".config/weechat/spell.conf", "weechat/spell.conf"],
+		[".config/weechat/tcl.conf", "weechat/tcl.conf"],
+		[".config/weechat/trigger.conf", "weechat/trigger.conf"],
+		[".config/weechat/typing.conf", "weechat/typing.conf"],
+		[".config/weechat/weechat.conf", "weechat/weechat.conf"],
+		[".config/weechat/xfer.conf", "weechat/xfer.conf"],
 	]
 
 [tasks.wezterm]
