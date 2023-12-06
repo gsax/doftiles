@@ -86,8 +86,8 @@ hdr_order Date From To Cc Subject User-Agent
 # GnuPG
 #source /etc/mutt/gpg.rc
 set crypt_autosign=yes
-set pgp_default_key="0x09B7DCB1595B1A3484FE2005EC22623990AC1A58"
-set pgp_sign_as="0x09B7DCB1595B1A3484FE2005EC22623990AC1A58"
+set pgp_default_key="0xF94EBE10F06321A70109E7C574A62E84A0031125"
+set pgp_sign_as="0xF94EBE10F06321A70109E7C574A62E84A0031125"
 set pgp_self_encrypt = yes
 set crypt_use_gpgme = yes
 set crypt_use_pka = yes
