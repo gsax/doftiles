@@ -192,6 +192,7 @@
 		[".local/launcher/nnn", "launcher-scripts/nnn"],
 		[".local/launcher/ranger", "launcher-scripts/ranger"],
 		[".local/launcher/vifm", "launcher-scripts/vifm"],
+		[".local/launcher/xplr", "launcher-scripts/xplr"],
 		[".local/launcher/fshot", "launcher-scripts/fshot"],
 		[".local/launcher/sshot", "launcher-scripts/sshot"],
 		[".local/launcher/wshot", "launcher-scripts/wshot"],

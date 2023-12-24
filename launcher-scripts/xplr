@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/alacritty --class=xplr -e /usr/bin/xplr
