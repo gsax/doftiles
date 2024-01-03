@@ -1,7 +1,7 @@
 [tasks.alacritty]
 	# templates = [
 	links = [
-		[".config/alacritty/alacritty.yml", "alacritty/home/alacritty.yml"],
+		[".config/alacritty/alacritty.toml", "alacritty/home/alacritty.toml"],
 	]
 
 [tasks.bspwm]

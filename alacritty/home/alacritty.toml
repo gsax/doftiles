@@ -1,0 +1,61 @@
+[window]
+dynamic_padding = true
+opacity = 0.9
+
+[scrolling]
+history = 100000
+
+[font]
+size = 10.0
+
+[colors]
+
+[colors.primary]
+background = "#181a26"
+foreground = "#f8f8f2"
+
+[colors.search.matches]
+background = "#3e4452"
+foreground = "#ff24a2"
+
+[colors.search.focused_match]
+background = "#3e4452"
+foreground = "#00fa3f"
+
+[colors.line_indicator]
+background = "#c153f9"
+foreground = "#21222c"
+
+[colors.footer_bar]
+background = "#3e4452"
+foreground = "#26d7fd"
+
+[colors.selection]
+background = "#21222c"
+text = "#ff5db9"
+
+[colors.normal]
+black = "#21222c"
+blue = "#c153f9"
+cyan = "#26d7fd"
+green = "#00fa3f"
+magenta = "#ff24a2"
+red = "#ff5555"
+white = "#bfbfbf"
+yellow = "#bffa35"
+
+[colors.bright]
+black = "#3e4452"
+blue = "#b682fa"
+cyan = "#86e9fe"
+green = "#25f76b"
+magenta = "#ff5db9"
+red = "#ff6e67"
+white = "#e6e6e6"
+yellow = "#daf97d"
+
+[keyboard]
+bindings = [
+	{ key = "L", mods = "Control", mode = "~Vi|~Search", chars = "\f" },
+	{ key = "L", mods = "Control", mode = "~Vi|~Search", action = "ClearHistory" },
+]
