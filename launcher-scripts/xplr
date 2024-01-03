@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/usr/bin/alacritty --class=xplr -e /usr/bin/xplr
+/usr/bin/alacritty --class="File Manager" --title="xplr" -e /usr/bin/xplr

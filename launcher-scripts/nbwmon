@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/usr/bin/alacritty --class=htop -e /home/gsx/dev/c/nbwmon/build/nbwmon "$@"
+/usr/bin/alacritty --class="Network Monitor" --title="nbwmon" -e /home/gsx/dev/c/nbwmon/build/nbwmon "$@"

@@ -1,3 +1,4 @@
 #!/bin/sh
 
-/usr/bin/joplin-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
+#/usr/bin/joplin-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
+/usr/bin/joplin-desktop
