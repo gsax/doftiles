@@ -206,6 +206,7 @@
 [tasks.sysctl]
 	templates = [
 		["/etc/sysctl.d/40-IPv6.conf", "sysctl/40-IPv6.conf"],
+		["/etc/sysctl.d/99-disable-privileged-ports.conf", "sysctl/99-disable-privileged-ports.conf"],
 	]
 
 [tasks.systemd]
