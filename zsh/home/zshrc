@@ -79,12 +79,12 @@ alias uber-gsxtiddlywiki='mosh -p 43380 gsxtiddlywiki'
 alias uber-analspinach='mosh -p 44460 analspinach'
 
 # get help from cht.sh
-cht () {
+cht() {
 	command curl https://cht.sh/"$@" | less -R
 }
 
 # read Xresources before starting nsxiv
-nsxiv (){
+nsxiv() {
 	xrdb ~/.Xresources && command nsxiv "$@"
 }
 
@@ -96,28 +96,26 @@ gcal() {
 }
 
 # don't show the banner for ffmpeg stuff
-ffmpeg () {
+ffmpeg() {
 	command ffmpeg -hide_banner "$@"
 }
-ffplay () {
+ffplay() {
 	command ffplay -hide_banner "$@"
 }
-ffprobe () {
+ffprobe() {
 	command ffprobe -hide_banner "$@"
 }
 
 # use xdg_config_dir for peaclock
-peaclock () {
+peaclock() {
 	command peaclock --config-dir ~/.config/peaclock "$@"
 }
-
 # binary peaclock
-Peab () {
+Peab() {
 	command peaclock --config-dir ~/.config/peaclock -u ~/.config/peaclock/binary.conf "$@"
 }
-
 # digital peaclock
-Pead () {
+Pead() {
 	command peaclock --config-dir ~/.config/peaclock -u ~/.config/peaclock/digital.conf "$@"
 }
 
@@ -128,8 +126,8 @@ TV-dl() {
 Kink-dl() {
 	command aria2c --auto-file-renaming=false "$@"
 }
-YT (){
-       command yt-dlp --restrict-filenames --sleep-requests 1 --compat-options filename --abort-on-unavailable-fragment --retry-sleep fragment:exp=1:20 -c "$@"
+YT() {
+	command yt-dlp --restrict-filenames --sleep-requests 1 --compat-options filename --abort-on-unavailable-fragment --retry-sleep fragment:exp=1:20 -c "$@"
 }
 
 # unpack
