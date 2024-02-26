@@ -130,6 +130,11 @@ YT() {
 	command yt-dlp --restrict-filenames --sleep-requests 1 --compat-options filename --abort-on-unavailable-fragment --retry-sleep fragment:exp=1:20 -c "$@"
 }
 
+# change directory when quitting xplr
+xplr() {
+	cd "$(command xplr --print-pwd-as-result)"
+}
+
 # unpack
 unpack() {
 	setopt localoptions
