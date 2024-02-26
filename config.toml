@@ -278,6 +278,11 @@
 		["/etc/X11/xorg.conf.d/20-security.conf", "etc/xorg.conf.d/20-security.conf"],
 	]
 
+[tasks.xplr]
+	links = [
+		[".config/xplr/init.lua", "xplr/init.lua"],
+	]
+
 [tasks.yay]
 	links = [
 		[".config/yay/config.json", "yay/config.json"],
