@@ -1,6 +1,9 @@
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/gsx/Pictures/BlackLagoon/4518382-black-lagoon-sun-rays-anime-girls-pacific-ocean-pistol-palm-trees-revy.png fill
 
+output LVDS-1 pos 0 0 res 1366x768
+output HDMI-A-2 pos 0 769 res 1920x1080
+
 # wob indicator bar
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
