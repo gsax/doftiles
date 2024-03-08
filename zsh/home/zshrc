@@ -132,7 +132,7 @@ YT() {
 
 # change directory when quitting xplr
 xplr() {
-	cd "$(command xplr --print-pwd-as-result)"
+	cd "$(command xplr --print-pwd-as-result $@)"
 }
 
 # unpack
