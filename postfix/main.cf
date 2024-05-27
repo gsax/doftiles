@@ -411,7 +411,7 @@ mynetworks_style = host
 #alias_maps = hash:/etc/aliases
 #alias_maps = hash:/etc/aliases, nis:mail.aliases
 #alias_maps = netinfo:/aliases
-alias_maps = hash:/etc/postfix/aliases
+alias_maps = lmdb:/etc/postfix/aliases
 
 # The alias_database parameter specifies the alias database(s) that
 # are built with "newaliases" or "sendmail -bi".  This is a separate
@@ -694,12 +694,12 @@ meta_directory = /etc/postfix
 smtp_sasl_auth_enable = yes
 smtp_sasl_security_options = noanonymous
 #smtp_sasl_security_options = noplaintext noanonymous
-smtp_sasl_password_maps = hash:/etc/postfix/sasl_password
+smtp_sasl_password_maps = lmdb:/etc/postfix/sasl_password
 
 # set mail sender
 #
 smtp_sender_dependent_authentication = yes
-sender_dependent_relayhost_maps = hash:/etc/postfix/relayhost_map
+sender_dependent_relayhost_maps = lmdb:/etc/postfix/relayhost_map
 
 # activate tls
 #
