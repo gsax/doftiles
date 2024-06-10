@@ -288,6 +288,11 @@
 		[".config/yay/config.json", "yay/config.json"],
 	]
 
+[tasks.zathura]
+	links = [
+		[".config/zathura/zathurarc", "zathura/zathurarc"],
+	]
+
 [tasks.zsh]
 	links = [
 		[".config/zsh/.zshenv", "zsh/home/zshenv"],
