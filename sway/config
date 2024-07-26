@@ -136,6 +136,9 @@ input "type:keyboard" {
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
 
+    # Stretch the current focus accross all screens
+    bindsym $mod+Shift+f fullscreen toggle global
+
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
 
