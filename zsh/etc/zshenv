@@ -15,7 +15,7 @@ PATH="${PATH}"; export PATH
 ZDOTDIR=~/.config/zsh; export ZDOTDIR
 
 # set pager, editor, visual and browser variables
-PAGER=/usr/bin/nvimpager; export PAGER
+PAGER=/usr/bin/less; export PAGER
 EDITOR=/usr/bin/vi; export EDITOR
 VISUAL=/usr/bin/vi; export VISUAL
 
