@@ -48,6 +48,11 @@
 		[".config/doom/packages.el", "emacs/doom/packages.el"],
 	]
 
+[tasks.foot]
+	links = [
+		[".config/foot/foot.ini", "foot/foot.ini"],
+	]
+
 [tasks.gdb]
 	links = [
 		[".config/gdb/gdbearlyinit", "gdb/gdbearlyinit"],
