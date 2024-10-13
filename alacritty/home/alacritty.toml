@@ -6,7 +6,9 @@ opacity = 0.9
 history = 100000
 
 [font]
+normal = { family = "Monaspace Krypton"}
 size = 10.0
+offset = { y = 0 }
 
 [colors]
 
