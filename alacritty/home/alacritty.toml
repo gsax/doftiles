@@ -7,7 +7,7 @@ history = 100000
 
 [font]
 normal = { family = "Monaspace Krypton"}
-size = 10.0
+size = 9.75
 offset = { y = 0 }
 
 [colors]
