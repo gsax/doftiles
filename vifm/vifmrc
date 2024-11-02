@@ -90,11 +90,14 @@ if !has('win')
     set slowfs=curlftpfs
 endif
 
-" Set custom status line look
-set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
-
 " List of color schemes to try (picks the first one supported by the terminal)
 colorscheme dracula
+
+" Set custom status line look
+highlight User1 ctermfg=magenta
+highlight User2 ctermfg=green
+highlight User3 ctermfg=cyan
+set statusline="%1* %{&sort} %2* ❯❯ %3* %t%= %* %A %10u:%-7g %15E %20d  "
 
 " ------------------------------------------------------------------------------
 " Bookmarks
