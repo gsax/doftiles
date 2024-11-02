@@ -18,6 +18,9 @@ for_window [app_id="^WINDOW-SWITCHER$"] floating enable, sticky enable, resize s
 set $launcher exec alacritty --option=font.size=16.5 --class=LAUNCHER -e /home/gsx/dev/shell/launcher.sh
 set $window-switcher exec alacritty --option=font.size=16.5 --class=WINDOW-SWITCHER -e /home/gsx/dev/shell/window-switcher.sh
 
+# use no borders with mpv
+for_window [app_id="mpv"] border none
+
 # Make all zoom windows floating
 for_window [app_id="^zoom$"] floating enable
 
