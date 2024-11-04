@@ -38,18 +38,7 @@ alias halt='sudo halt'
 alias poweroff='sudo poweroff'
 alias reboot='sudo reboot'
 
-# run nmap as root
-#nmap() {
-#	command sudo nmap "$@"
-#}
-#zenmap() {
-#	command sudo zenmap "$@"
-#}
-
 # run some monitoring tools as root
-iotop() {
-	command sudo iotop "$@"
-}
 hddtemp() {
 	command sudo hddtemp "$@"
 }
@@ -63,16 +52,9 @@ alias la="ls -a"
 alias lla="ls -la"
 alias llh="ll -h"
 
-# clone projects from GitHub
-GitHub() {
-	command git clone 'https://github.com/'"$@"
-}
-
 # mosh connections to my uberspace webspaces
 alias uber-gsx='mosh -p 41400 gsx'
 alias uber-gsxcloud='mosh -p 41240 gsxcloud'
-alias uber-gsxtiddlywiki='mosh -p 43380 gsxtiddlywiki'
-alias uber-analspinach='mosh -p 44460 analspinach'
 
 # get help from cht.sh
 cht() {
@@ -100,35 +82,6 @@ ffplay() {
 }
 ffprobe() {
 	command ffprobe -hide_banner "$@"
-}
-
-# use xdg_config_dir for peaclock
-peaclock() {
-	command peaclock --config-dir ~/.config/peaclock "$@"
-}
-# binary peaclock
-Peab() {
-	command peaclock --config-dir ~/.config/peaclock -u ~/.config/peaclock/binary.conf "$@"
-}
-# digital peaclock
-Pead() {
-	command peaclock --config-dir ~/.config/peaclock -u ~/.config/peaclock/digital.conf "$@"
-}
-
-# download videos with codecs supported by my TV
-TV-dl() {
-  command youtube-dl --restrict-filenames -f 'bestvideo[ext=mp4][fps <=30]+bestaudio[ext=m4a]/best[ext=mp4]/best' "$@"
-}
-Kink-dl() {
-	command aria2c --auto-file-renaming=false "$@"
-}
-YT() {
-	command yt-dlp --restrict-filenames --sleep-requests 1 --compat-options filename --abort-on-unavailable-fragment --retry-sleep fragment:exp=1:20 -c "$@"
-}
-
-# change directory when quitting xplr
-xplr() {
-	cd "$(command xplr --print-pwd-as-result $@)"
 }
 
 # unpack
