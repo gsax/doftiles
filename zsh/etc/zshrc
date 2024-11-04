@@ -131,19 +131,6 @@ chpwd() {
 [[ -h /etc/zsh/read_terminfo.zsh || -s /etc/zsh/read_terminfo.zsh ]] &&
 source /etc/zsh/read_terminfo.zsh
 
-# alias for reloading zshrc
-alias reload='
-	source /etc/zsh/zshenv &&
-	source $ZDOTDIR/.zshenv &&
-	source /etc/zsh/zprofile &&
-	source $ZDOTDIR/.zprofile &&
-	source /etc/zsh/zshrc &&
-	source $ZDOTDIR/.zshrc &&
-	source /etc/zsh/zlogin &&
-	source $ZDOTDIR/.zlogin &&
-	echo "ZSH config reloaded"
-'
-
 # make sure our environment is clean regarding colors
 for color in BLUE RED GREEN CYAN YELLOW MAGENTA WHITE ; unset $color
 
