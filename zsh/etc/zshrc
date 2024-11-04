@@ -110,11 +110,6 @@ alias ls='ls --color=auto -F --time-style=long-iso'
 # colorfull grep
 alias grep='grep --color=auto'
 
-# use reflinks with cp
-cp() {
-	command cp --reflink=auto "$@"
-}
-
 # make some programs colorfull with grc
 [[ -x $(which grc) ]] &&
 source /etc/zsh/grc.sh
