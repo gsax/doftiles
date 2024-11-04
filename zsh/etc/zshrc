@@ -131,13 +131,6 @@ chpwd() {
 [[ -h /etc/zsh/read_terminfo.zsh || -s /etc/zsh/read_terminfo.zsh ]] &&
 source /etc/zsh/read_terminfo.zsh
 
-# let ^Z toggle vi
-foreground-vi() {
-	fg %vi
-}
-zle -N foreground-vi
-bindkey '^Z' foreground-vi
-
 # alias for reloading zshrc
 alias reload='
 	source /etc/zsh/zshenv &&
