@@ -42,9 +42,6 @@ alias reboot='sudo reboot'
 hddtemp() {
 	command sudo hddtemp "$@"
 }
-pktstat() {
-	command sudo pktstat "$@"
-}
 
 # ls aliases
 alias ll="ls -l"
