@@ -110,10 +110,6 @@ alias ls='ls --color=auto -F --time-style=long-iso'
 # colorfull grep
 alias grep='grep --color=auto'
 
-# make some programs colorfull with grc
-[[ -x $(which grc) ]] &&
-source /etc/zsh/grc.sh
-
 # dir control
 export DIRSTACKSIZE=10
 setopt auto_pushd
