@@ -15,9 +15,6 @@ autoload -U bashcompinit; bashcompinit
 autoload -U select-word-style
 select-word-style bash
 
-# load nslookup (wrapper around nslookup)
-autoload -U nslookup
-
 # load zargs (zsh version of xargs)
 autoload -U zargs
 
