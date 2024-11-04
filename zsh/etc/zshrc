@@ -110,6 +110,11 @@ alias ls='ls --color=auto -F --time-style=long-iso'
 # colorfull grep
 alias grep='grep --color=auto'
 
+# colorfull ip
+ip() {
+	command ip --color=auto "$@"
+}
+
 # dir control
 export DIRSTACKSIZE=10
 setopt auto_pushd
