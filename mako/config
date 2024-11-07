@@ -5,6 +5,7 @@ output=DP-1
 {{ end }}
 
 width=200
+height=200
 background-color=#181a26
 border-color=#3e4452
 
