@@ -100,7 +100,7 @@
 	]
 
 [tasks.mako]
-  links = [
+	templates = [
 		[".config/mako/config", "mako/config"],
 	]
 
