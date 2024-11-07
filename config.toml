@@ -221,6 +221,12 @@
 		["/etc/systemd/system/btrbk.service", "systemd/system/btrbk.service"],
 	]
 
+[tasks.tlp]
+	templates = [
+		["/etc/tlp.d/01-battery.conf", "tlp/01-battery.conf"],
+		["/etc/tlp.d/02-radio-devices.conf", "sysctl/02-radio-devices.conf"],
+	]
+
 [tasks.tmux]
 	links = [
 		[".config/tmux/tmux.conf", "tmux/home/tmux.conf"],
