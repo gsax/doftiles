@@ -1,0 +1,17 @@
+icon-path=/usr/share/icons/Dracula
+
+width=200
+background-color=#181a26
+border-color=#3e4452
+
+[urgency=low]
+text-color=#5e6472
+default-timeout=2500
+
+[urgency=normal]
+text-color=#c153f9
+default-timeout=5000
+
+[urgency=critical]
+text-color=#ff5555
+default-timeout=0

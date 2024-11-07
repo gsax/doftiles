@@ -99,6 +99,11 @@
 		["/etc/locale.conf", "locale/locale.conf"],
 	]
 
+[tasks.mako]
+  links = [
+		[".config/mako/config", "mako/config"],
+	]
+
 [tasks.mime]
   links = [
 		[".config/mimeapps.list", "mime/mimeapps.list"],
