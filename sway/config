@@ -185,6 +185,17 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+#
+# Notifications:
+#
+# dismiss notifications
+bindsym $mod+grave exec makoctl dismiss
+# and restore notifications
+bindsym $mod+shift+grave exec makoctl restore
+
+# show date and time
+bindsym $mod+d exec notify-send -u normal -i /usr/share/icons/Dracula/symbolic/apps/office-calendar-symbolic.svg "$(date +'%Y-%m-%d')" "$(date +'%H:%M KW%V')"
+
 ### Appereance
 #
 # border style and width
