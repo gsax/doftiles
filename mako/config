@@ -4,7 +4,11 @@ icon-path=/usr/share/icons/Dracula
 output=DP-1
 {{ end }}
 
+{{ if eq .Env.HOST "pc" }}
+width=300
+{{ else if eq .Env.HOST "x230" }}
 width=200
+{{ end }}
 height=200
 background-color=#181a26
 border-color=#3e4452
