@@ -43,7 +43,7 @@ exec swayidle -w \
 input "type:keyboard" {
     "xkb_layout" "us"
     "xkb_variant" "altgr-intl"
-    "xkb_options" "caps:escape_shifted_capslock,shift:both_capslock"
+    "xkb_options" "caps:escape,shift:both_capslock"
 }
 
 ### Key bindings
