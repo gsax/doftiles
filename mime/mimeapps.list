@@ -164,8 +164,8 @@ image/x-xpixmap=nsxiv.desktop;
 
 application/postscript=nsxiv.desktop;
 
-# nnn / file manager
-inode/directory=nnn.desktop;
+# vifm / file manager
+inode/directory=vifm.desktop;
 
 # khal / calendar
 text/calendar=khal.desktop;
