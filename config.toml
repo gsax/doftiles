@@ -48,6 +48,11 @@
 		[".config/doom/packages.el", "emacs/doom/packages.el"],
 	]
 
+[tasks.font]
+	links = [
+		[".config/fontconfig/local.conf", "fonts/local.conf"],
+	]
+
 [tasks.foot]
 	links = [
 		[".config/foot/foot.ini", "foot/foot.ini"],
