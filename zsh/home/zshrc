@@ -64,7 +64,9 @@ nsxiv() {
 }
 
 # cal start week with mondays
-alias cal='cal -m'
+cal() {
+	khal calendar "$@"
+}
 # gcal
 gcal() {
 	command gcal --iso-week-number=yes -s1 -qDE_BY -H '\e[32m:\e[0m:\e[34m:\e[0m' "$@"
