@@ -563,4 +563,4 @@ nnoremap <space> tj
 " https://github.com/cirala/vifm_devicons
 
 " load icon support
-source /usr/share/vifm-devicons/favicons.vifm
+source ~/.config/vifm/devicons/favicons.vifm
