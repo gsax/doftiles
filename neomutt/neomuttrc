@@ -131,7 +131,7 @@ macro index S "<tag-prefix><save-message>=Archive\n"
 macro pager S "<save-message>=Archive\n"
 
 # colors
-source ~/sources/dracula/mutt/dracula.muttrc
+source /src/Dracula/mutt/dracula.muttrc
 
 # limit mails with / and search their Header and Body
 macro index / <limit>~B
