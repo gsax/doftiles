@@ -420,8 +420,8 @@ filextype */
 " ------------------------------------------------------------------------------
 
 " Customize view columns a bit (enable ellipsis for truncated file names)
-" set viewcolumns=-{name}..,6{}.
-set viewcolumns=-{name}..,6{size},18{mtime},7{uname},-7{gname},10{perms}.
+set viewcolumns=-{name}..,6{}.
+" set viewcolumns=-{name}..,6{size},18{mtime},7{uname},-7{gname},10{perms}.
 
 " Show vertical border
 " set fillchars=vborder:│
