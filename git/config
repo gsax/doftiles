@@ -2,11 +2,43 @@
 	name = Georg Sachs
 	email = gsx@protaisn.org
 	signingkey = F94EBE10F06321A70109E7C574A62E84A0031125
-[pull]
-	rebase = false
 [init]
 	defaultBranch = main
+[pull]
+	rebase = true
 [commit]
 	gpgSign = true
+	verbose = true
 [tag]
 	gpgSign = true
+	sort = version:refname
+[branch]
+	sort = -committerdate
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[help]
+	autocorrect = prompt
+[rerere]
+	enabled = true
+	autoupdate = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[merge]
+	conflictstyle = zdiff3
+[feature]
+	experimental = true
+[grep]
+	patternType = perl
