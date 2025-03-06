@@ -2,12 +2,12 @@
 ### Begin Red Hat Mailcap
 ###
 
-audio/*; /usr/bin/xdg-open %s
+audio/*; xdg-open %s
 
-image/*; /usr/bin/xdg-open %s
+image/*; xdg-open %s
 
-application/msword; /usr/bin/xdg-open %s
-application/pdf; /usr/bin/xdg-open %s
-application/postscript ; /usr/bin/xdg-open %s
+application/msword; xdg-open %s
+application/pdf; xdg-open %s
+application/postscript ; xdg-open %s
 
-text/html; /usr/bin/xdg-open %s ; copiousoutput
+text/html; xdg-open %s ; copiousoutput
