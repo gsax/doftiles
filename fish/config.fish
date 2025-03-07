@@ -17,7 +17,6 @@ if status is-interactive
     # use less for colorfull manpages
     # set -gx MANPAGER "less -M -R -i --use-color -Dd+R -Du+B -DHkC -j5"
 
-    # Aliases
     # remove the l alias for ls -alh
     functions --erase l
     # ls
@@ -34,13 +33,21 @@ if status is-interactive
     alias cal 'khal calendar'
 
     # uberspace connections
-    alias uber-cloud 'mosh -p 41240 gsxcloud'
-    alias uber-gsx 'mosh -p 41400 gsx'
+    abbr --add UG mosh -p 41400 gsx
+    abbr --add UC mosh -p 41240 gsxcloud
 
     # don't show the banner for ffmpeg stuff
     alias ffmpeg 'ffmpeg -hide_banner'
     alias ffplay 'ffplay -hide_banner'
     alias ffprobe 'ffprobe -hide_banner'
+
+    ## system administration
+    # change global config
+    abbr --add nuc sudo -E vi /etc/nixos/configuration.nix
+    # update config
+    abbr --add nup sudo nixos-rebuild switch
+    # upgrade system
+    abbr --add nus sudo nixos-rebuild switch --upgrade
 
     # get help from cht.sh
     function cht
