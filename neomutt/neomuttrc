@@ -104,6 +104,7 @@ alternative_order text/plain text/enriched text/html
 # switch imap accounts
 macro index <f4> '<sync-mailbox><enter-command>source ~/.config/neomutt/gsx.rc<enter><change-folder>!<enter>'
 macro index <f5> '<sync-mailbox><enter-command>source ~/.config/neomutt/black-neon.rc<enter><change-folder>!<enter>'
+macro index <f6> '<sync-mailbox><enter-command>source ~/.config/neomutt/black-neon-vt.rc<enter><change-folder>!<enter>'
 
 # adressbook
 set query_command="khard email --parsable"

@@ -1,4 +1,4 @@
-set imap_user="`gpg -qd /secrets/mail-gsx.gpg | grep imap_user | cut -d ' ' -f2`"
-set imap_pass="`gpg -qd /secrets/mail-gsx.gpg | grep imap_pass | cut -d ' ' -f2`"
-set spoolfile="`gpg -qd /secrets/mail-gsx.gpg | grep spoolfile | cut -d ' ' -f2`"
-set folder="`gpg -qd /secrets/mail-gsx.gpg | grep folder | cut -d ' ' -f2`"
+set imap_user="`gpg -qd /secrets/mail/uberspace-gsx.gpg | grep imap_user | cut -d ' ' -f2`"
+set imap_pass="`gpg -qd /secrets/mail/uberspace-gsx.gpg | grep imap_pass | cut -d ' ' -f2`"
+set spoolfile="`gpg -qd /secrets/mail/uberspace-gsx.gpg | grep spoolfile | cut -d ' ' -f2`"
+set folder="`gpg -qd /secrets/mail/uberspace-gsx.gpg | grep folder | cut -d ' ' -f2`"
