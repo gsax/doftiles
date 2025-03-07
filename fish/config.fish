@@ -58,5 +58,5 @@ if status is-interactive
     any-nix-shell fish --info-right | source
 
     # enable atuin
-    atuin init fish | source
+    # atuin init fish | source
 end
