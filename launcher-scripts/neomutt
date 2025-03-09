@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/usr/bin/alacritty --class="E-Mail" --title="neomutt" -e /usr/bin/neomutt
+alacritty --class="E-Mail" --title="neomutt" -e neomutt
