@@ -1,0 +1,4 @@
+address "chat.sr.ht:6697"
+nickname "gsx@x230_senpai"
+password-cmd gpg -qd /secrets/irc/senpai.gpg
+
