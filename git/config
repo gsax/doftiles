@@ -2,6 +2,8 @@
 	name = Georg Sachs
 	email = gsx@protaisn.org
 	signingkey = F94EBE10F06321A70109E7C574A62E84A0031125
+[sendemail]
+	sendmailCmd = /run/wrappers/bin/sendmail -f gsx@protaisn.org
 [init]
 	defaultBranch = main
 [pull]
