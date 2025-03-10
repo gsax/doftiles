@@ -49,6 +49,22 @@ if status is-interactive
     # upgrade system
     abbr --add nus sudo nixos-rebuild switch --upgrade
 
+    ## sync
+    # get password database
+    abbr --add PS rsync pc:Passwords/Passwords.kdbx /secrets/Passwords.kdbx
+    # update videos
+    abbr --add VU rsync -ruP pc:media/14/Videos/ ~/Videos/
+    abbr --add VUD rsync -rP pc:media/14/Videos/ ~/Videos/
+    # sync videos
+    abbr --add VS rsync --delete -ruP pc:media/14/Videos/ ~/Videos/
+    abbr --add VSD rsync --delete -rP pc:media/14/Videos/ ~/Videos/
+    # update music
+    abbr --add MU rsync -ruP pc:media/14/audio/ ~/Music/
+    abbr --add MUD rsync -rP pc:media/14/audio/ ~/Music/
+    # sync music
+    abbr --add MS rsync --delete -ruP pc:media/14/audio/ ~/Music/
+    abbr --add MSD rsync --delete -rP pc:media/14/audio/ ~/Music/
+
     # get help from cht.sh
     function cht
         curl https://cht.sh/$argv | less -R
