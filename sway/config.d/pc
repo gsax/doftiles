@@ -8,3 +8,6 @@ output DP-1 bg /home/gsx/media/14/Pictures/Artstation/Antunesketch_WP/joao-antun
 output DP-2 bg /home/gsx/media/14/Pictures/Artstation/Antunesketch_WP/joao-antunes-jr-antunesketch-3_wp.jpg fill
 output DP-3 bg /home/gsx/media/14/Pictures/Artstation/Antunesketch_WP/joao-antunes-jr-antunesketch-4_2_wp.jpg fill
 
+# change display brightness
+bindsym --locked XF86MonBrightnessDown exec ddcutil -d 1 setvcp 10 - 5 && ddcutil -d 2 setvcp 10 - 5 && ddcutil -d 3 setvcp 10 - 5
+bindsym --locked XF86MonBrightnessUp exec ddcutil -d 1 setvcp 10 + 5 && ddcutil -d 2 setvcp 10 + 5 && ddcutil -d 3 setvcp 10 + 5
