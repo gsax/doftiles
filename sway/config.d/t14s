@@ -41,9 +41,9 @@ bindsym --locked XF86MonBrightnessDown \
 # lock screen
 bindsym XF86NotificationCenter exec swaylock -f
 # suspend to ram
-bindsym XF86PickupPhone exec systemctl suspend && swaylock -f
+bindsym XF86PickupPhone exec swaylock -f && systemctl suspend
 # hibernate / suspend to disk
-bindsym XF86HangupPhone exec systemctl hibernate && swaylock -f
+bindsym XF86HangupPhone exec swaylock -f && systemctl hibernate
 # when closing the lid
 bindswitch --reload --locked lid:on exec swaylock -f
 # start backupterminal
