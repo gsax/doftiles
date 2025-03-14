@@ -13,10 +13,27 @@ set $term_backup foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-for_window [app_id="^LAUNCHER$"] floating enable, sticky enable, resize set 300 px 500 px, move position 50 px 50 px, border pixel 1
-for_window [app_id="^WINDOW-SWITCHER$"] floating enable, sticky enable, resize set 1000 px 500 px, border pixel 1
-set $launcher exec alacritty --option=font.size=16.5 --class=LAUNCHER -e ~/.config/sway/scripts/launcher.sh
-set $window-switcher exec alacritty --option=font.size=16.5 --class=WINDOW-SWITCHER -e ~/.config/sway/scripts/window-switcher.sh
+for_window [app_id="^LAUNCHER$"] \
+    floating enable, \
+    sticky enable, \
+    resize set 300 px 500 px, \
+    move position 50 px 50 px, \
+    border pixel 1
+for_window [app_id="^WINDOW-SWITCHER$"] \
+    floating enable, \
+    sticky enable, \
+    resize set 1000 px 500 px, \
+    border pixel 1
+set $launcher \
+    exec alacritty \
+    --option=font.size=16.5 \
+    --class=LAUNCHER \
+    -e ~/.config/sway/scripts/launcher.sh
+set $window-switcher \
+    exec alacritty \
+    --option=font.size=16.5 \
+    --class=WINDOW-SWITCHER \
+    -e ~/.config/sway/scripts/window-switcher.sh
 
 # use no borders with mpv
 for_window [app_id="mpv"] border none
@@ -28,7 +45,8 @@ for_window [app_id="^zoom$"] floating enable
 seat * hide_cursor when-typing enable
 
 # start xdg-desktop-portal
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment \
+    --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 # load Xresources
 exec xrdb ~/.Xresources
@@ -74,7 +92,9 @@ input "type:keyboard" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning \
+    -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' \
+    -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -194,7 +214,12 @@ bindsym $mod+grave exec makoctl dismiss
 bindsym $mod+shift+grave exec makoctl restore
 
 # show date and time
-bindsym $mod+d exec notify-send -u normal -i /usr/share/icons/Dracula/symbolic/apps/office-calendar-symbolic.svg "$(date +'%Y-%m-%d')" "$(date +'%H:%M KW%V')"
+bindsym $mod+d \
+    exec notify-send \
+    -u normal \
+    -i /usr/share/icons/Dracula/symbolic/apps/office-calendar-symbolic.svg \
+    "$(date +'%Y-%m-%d')" \
+    "$(date +'%H:%M KW%V')"
 
 ### Appereance
 #
