@@ -48,3 +48,13 @@ bindsym XF86HangupPhone exec swaylock -f && systemctl hibernate
 bindswitch --reload --locked lid:on exec swaylock -f
 # start backupterminal
 bindsym XF86Favorites exec $term_backup
+
+# touchpad config
+input "2:14:ETPS/2_Elantech_Touchpad" {
+    # disable while typing
+    dwt enabled
+    # tap for click
+    tap enabled
+    # pressing both buttons emeulates middle button
+    middle_emulation enabled
+}
