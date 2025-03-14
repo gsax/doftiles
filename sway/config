@@ -217,7 +217,7 @@ bindsym $mod+shift+grave exec makoctl restore
 bindsym $mod+d \
     exec notify-send \
     -u normal \
-    -i /usr/share/icons/Dracula/symbolic/apps/office-calendar-symbolic.svg \
+    -i /etc/profiles/per-user/gsx/share/icons/Dracula/symbolic/apps/office-calendar-symbolic.svg \
     "$(date +'%Y-%m-%d')" \
     "$(date +'%H:%M KW%V')"
 
