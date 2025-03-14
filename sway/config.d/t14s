@@ -44,7 +44,7 @@ bindsym XF86NotificationCenter exec swaylock -f
 bindsym XF86PickupPhone exec swaylock -f && systemctl suspend
 # hibernate / suspend to disk
 bindsym XF86HangupPhone exec swaylock -f && systemctl hibernate
-# when closing the lid
+# lock when closing the lid
 bindswitch --reload --locked lid:on exec swaylock -f
 # start backupterminal
 bindsym XF86Favorites exec $term_backup
