@@ -39,15 +39,12 @@ bindsym --locked XF86MonBrightnessDown \
     exec brightnessctl -e s 2%- && brightnessctl info | \
     sed -ne 's/^.*(//' -e 's/%).*$//p' > $WOBSOCK
 # lock screen
-bindsym XF86NotificationCenter exec swaylock -f
-# suspend to ram
-bindsym XF86PickupPhone exec swaylock -f && systemctl suspend
-# hibernate / suspend to disk
-bindsym XF86HangupPhone exec swaylock -f && systemctl hibernate
+bindsym XF86HangupPhone exec swaylock -f
+# suspend to ram and hibernate when
+# the battery falls below 5% or is in suspend for over 2 hours
+bindsym XF86Favorites exec swaylock -f && systemctl suspend-then-hibernate
 # lock when closing the lid
 bindswitch --reload --locked lid:on exec swaylock -f
-# start backupterminal
-bindsym XF86Favorites exec $term_backup
 
 # touchpad config
 input "2:14:ETPS/2_Elantech_Touchpad" {
