@@ -19,9 +19,15 @@ bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ 
 bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 # Brightness
-bindsym --locked XF86MonBrightnessUp exec brightnessctl -e s +2%
-bindsym --locked XF86MonBrightnessDown exec brightnessctl -e s 2%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl -e s +2% && brightnessctl info | sed -ne 's/^.*(//' -e 's/%).*$//p' > $WOBSOCK
+bindsym --locked XF86MonBrightnessDown exec brightnessctl -e s 2%- && brightnessctl info | sed -ne 's/^.*(//' -e 's/%).*$//p' > $WOBSOCK
 # lock screen
-bindsym XF86Launch1 exec swaylock -f
+bindsym XF86NotificationCenter exec swaylock -f
+# suspend to ram
+bindsym XF86PickupPhone exec systemctl suspend && swaylock -f
+# hibernate / suspend to disk
+bindsym XF86HangupPhone exec systemctl hibernate && swaylock -f
 # when closing the lid
 bindswitch --reload --locked lid:on exec swaylock -f
+# start backupterminal
+bindsym XF86Favorites exec $term_backup
