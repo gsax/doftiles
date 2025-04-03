@@ -8,9 +8,16 @@ export FZF_DEFAULT_OPTS=" \
 
 echo -ne "\x1b]0;WINDOW-SWITCHER\x1b\\"
 swaymsg -t get_tree \
-        | jq -r 'recurse(.nodes[]?)|recurse(.floating_nodes[]?)|select(.type=="con"),select(.type=="floating_con")|(.id|tostring)+" "+.app_id+": "+.name' \
-        | rg -v '^[0-9]* : $' \
-        | rg -v 'WINDOW-SWITCHER' \
-				| fzf \
-				| awk '{print $1}' \
-				| xargs -I % swaymsg '[con_id="%"] focus'
+	| jq -r '.nodes[].nodes[]
+		| select(.type == "workspace")
+		| .name as $ws
+		| (.nodes[]
+			| select(.type == "con")
+			| "\($ws | if length == 1 then " " + . else . end): \(.app_id): \(.name) \(.id)"),
+		(.floating_nodes[]
+			| "\($ws | if length == 1 then " " + . else . end): \(.app_id): \(.name) \(.id)")' \
+	| rg -v '^[0-9]* : $' \
+	| rg -v 'WINDOW-SWITCHER' \
+	| fzf \
+	| awk '{print $NF}' \
+	| xargs -I % swaymsg '[con_id="%"] focus'
