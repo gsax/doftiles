@@ -1,6 +1,9 @@
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/gsx/Pictures/BlackLagoon/4518382-black-lagoon-sun-rays-anime-girls-pacific-ocean-pistol-palm-trees-revy.png fill
 
+# start shikane
+exec shikane
+
 # wob indicator bar
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
@@ -55,3 +58,4 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
     # pressing both buttons emeulates middle button
     middle_emulation enabled
 }
+
