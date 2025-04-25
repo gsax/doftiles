@@ -1,0 +1,5 @@
+#!/bin/sh
+
+QT_QPA_PLATFORM=xcb
+
+WinBox
