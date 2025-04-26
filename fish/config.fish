@@ -43,11 +43,15 @@ if status is-interactive
 
     ## system administration
     # change global config
-    abbr --add nuc sudo -E vi /etc/nixos/configuration.nix
+    abbr --add nuc sudo -E vi \
+        /etc/nixos/flake.nix \
+        /etc/nixos/configuration.nix \
+        /etc/nixos/hardware-configuration.nix
     # update config
     abbr --add nup sudo nixos-rebuild switch
     # upgrade system
-    abbr --add nus sudo nixos-rebuild switch --upgrade
+    # abbr --add nus sudo nixos-rebuild switch --upgrade
+    abbr --add nus "cd /etc/nixos && nix flake update"
 
     ## sync
     # get password database
