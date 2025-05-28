@@ -41,6 +41,9 @@ if status is-interactive
     alias ffplay 'ffplay -hide_banner'
     alias ffprobe 'ffprobe -hide_banner'
 
+    # we use nmap with capabilities, so we don't need root
+    alias nmap 'nmap --privileged'
+
     ## system administration
     # change global config
     abbr --add nuc sudo -E vi \
