@@ -2,11 +2,64 @@
 	name = Georg Sachs
 	email = gsx@protaisn.org
 	signingkey = F94EBE10F06321A70109E7C574A62E84A0031125
-[pull]
-	rebase = false
 [init]
 	defaultBranch = main
+[pull]
+	rebase = true
 [commit]
 	gpgSign = true
+	verbose = true
 [tag]
 	gpgSign = true
+	sort = version:refname
+[branch]
+	sort = -committerdate
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[help]
+	autocorrect = prompt
+[rerere]
+	enabled = true
+	autoupdate = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[merge]
+	conflictstyle = zdiff3
+[feature]
+	experimental = true
+[grep]
+	patternType = perl
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	features = side-by-side line-numbers decorations
+	; keep-plus-minus-markers = true
+	syntax-theme = Dracula
+	plus-style = syntax "#003800"
+	minus-style = syntax "#3f0001"
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+	hunk-header-decoration-style = cyan box ul
+[delta "line-numbers"]
+	line-numbers-left-style = cyan
+	line-numbers-right-style = cyan
+	line-numbers-minus-style = 124
+	line-numbers-plus-style = 28
