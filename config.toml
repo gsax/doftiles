@@ -4,6 +4,11 @@
 		[".config/alacritty/alacritty.toml", "alacritty/home/alacritty.toml"],
 	]
 
+[tasks.bat]
+	links = [
+		[".config/bat/config", "bat/config"],
+	]
+
 [tasks.bspwm]
 	links = [
 		[".config/bspwm/bspwmrc", "bspwm/home/bspwmrc"],
