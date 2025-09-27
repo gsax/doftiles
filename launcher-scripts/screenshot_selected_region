@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+grim -g "$(slurp)" - \
+	| satty --disable-notifications \
+	-f - -o ~/Pictures/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png

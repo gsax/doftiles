@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+grim -g "$(swaymsg -t get_tree \
+	| jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - \
+	| satty --disable-notifications \
+	-f - -o ~/Pictures/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png

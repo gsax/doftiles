@@ -34,12 +34,18 @@ set $window-switcher \
     --option=font.size=16.5 \
     --class=WINDOW-SWITCHER \
     -e ~/.config/sway/scripts/window-switcher.sh
+set $screenshot_focused_display \
+    exec ~/.local/bin/screenshot_focused_display
+set $screenshot_focused_window \
+    exec ~/.local/bin/screenshot_focused_window
+set $screenshot_selected_region \
+    exec ~/.local/bin/screenshot_selected_region
 
 # use no borders with mpv
 for_window [app_id="mpv"] border none
 
-# Make all zoom windows floating
-for_window [app_id="^zoom$"] floating enable
+# add a border to the satty window
+for_window [app_id="satty"] border pixel 1
 
 # hide cursor when typing
 seat * hide_cursor when-typing enable
@@ -80,6 +86,11 @@ input "type:keyboard" {
 
     # Start your window switcher
     bindsym $mod+p exec $window-switcher
+
+    # Take a screenshot
+    bindsym Print exec $screenshot_selected_region
+    bindsym $mod+Print exec $screenshot_focused_display
+    bindsym $mod+Shift+Print exec $screenshot_focused_window
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
