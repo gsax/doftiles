@@ -6,6 +6,8 @@
 	sendmailCmd = /run/wrappers/bin/sendmail -f gsx@protaisn.org
 [init]
 	defaultBranch = main
+	; set this until reftable is supported by nix
+	defaultRefFormat = files
 [pull]
 	rebase = true
 [commit]
