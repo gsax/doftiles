@@ -59,3 +59,7 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
     middle_emulation enabled
 }
 
+# Alternate mappsing for Return and BackSpace since they are broken on my Keyboard :-(
+bindsym $mod+Right  exec wtype -k Return
+bindsym $mod+Left  exec wtype -k BackSpace
+
