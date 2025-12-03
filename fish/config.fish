@@ -84,5 +84,5 @@ if status is-interactive
     # atuin init fish | source
 
     # enable zoxide
-    zoxide init fish | source
+    # zoxide init fish | source
 end

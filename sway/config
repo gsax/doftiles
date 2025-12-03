@@ -8,8 +8,8 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
-set $term_backup foot
+set $term foot
+set $term_backup alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -25,15 +25,15 @@ for_window [app_id="^WINDOW-SWITCHER$"] \
     resize set 1000 px 500 px, \
     border pixel 1
 set $launcher \
-    exec alacritty \
-    --option=font.size=16.5 \
-    --class=LAUNCHER \
-    -e ~/.config/sway/scripts/launcher.sh
+    exec foot \
+    --font="Monaspace Krypton:size=16.5" \
+    --app-id=LAUNCHER \
+    ~/.config/sway/scripts/launcher.sh
 set $window-switcher \
-    exec alacritty \
-    --option=font.size=16.5 \
-    --class=WINDOW-SWITCHER \
-    -e ~/.config/sway/scripts/window-switcher.sh
+    exec foot \
+    --font="Monaspace Krypton:size=16.5" \
+    --app-id=WINDOW-SWITCHER \
+    ~/.config/sway/scripts/window-switcher.sh
 set $screenshot_focused_display \
     exec ~/.local/bin/screenshot_focused_display
 set $screenshot_focused_window \
