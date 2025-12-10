@@ -53,8 +53,9 @@ if status is-interactive
     # update config
     abbr --add nup sudo nixos-rebuild switch
     # upgrade system
-    # abbr --add nus sudo nixos-rebuild switch --upgrade
     abbr --add nus "cd /etc/nixos && nix flake update"
+    # garbae collect, run nixos-rebuild switch afterwards, to clean boot entries
+    abbr --add nug sudo nix-collect-garbage --delete-older-than 7d
 
     ## sync
     # get password database
