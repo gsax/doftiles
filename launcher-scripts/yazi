@@ -1,0 +1,3 @@
+#!/bin/sh
+
+foot --app-id="File Manager" --title="yazi" yazi
