@@ -46,7 +46,7 @@ if status is-interactive
 
     ## system administration
     # change global config
-    abbr --add nuc sudo -E vi \
+    abbr --add nuc vi \
         /etc/nixos/flake.nix \
         /etc/nixos/configuration.nix \
         /etc/nixos/hardware-configuration.nix
