@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+grim -o $(hyprctl activeworkspace -j \
+	| jq -r '.monitor') - \
+	| satty --disable-notifications \
+	-f - -o ~/Pictures/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png
