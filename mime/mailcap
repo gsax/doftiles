@@ -8,6 +8,7 @@ image/*; xdg-open %s
 
 application/msword; xdg-open %s
 application/pdf; xdg-open %s
-application/postscript ; xdg-open %s
+application/postscript; xdg-open %s
 
-text/html; xdg-open %s ; copiousoutput
+text/html; xdg-open %s
+text/html; cha -I %{charset} -T text/html; copiousoutput;

@@ -99,7 +99,7 @@ set smime_keys="~/.local/share/neomutt/smime_keys"
 
 # show HTML-mails
 alternative_order text/plain text/enriched text/html
-#auto_view text/html
+auto_view text/html
 
 # switch imap accounts
 macro index <f4> '<sync-mailbox><enter-command>source ~/.config/neomutt/gsx.rc<enter><change-folder>!<enter>'
