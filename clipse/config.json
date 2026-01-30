@@ -1,0 +1,56 @@
+{
+  "allowDuplicates": false,
+  "historyFile": "clipboard_history.json",
+  "maxHistory": 100,
+  "deleteAfter": 0,
+  "logFile": "clipse.log",
+  "pollInterval": 50,
+  "maxEntryLength": 65,
+  "themeFile": "custom_theme.json",
+  "tempDir": "tmp_files",
+  "keyBindings": {
+    "choose": "enter",
+    "clearSelected": "S",
+    "down": "down,j",
+    "end": "end,G",
+    "filter": "/,=",
+    "forceQuit": "Q",
+    "home": "home,g",
+    "more": "?",
+    "nextPage": "right,ctrl+f",
+    "prevPage": "left,ctrl+b",
+    "preview": "space",
+    "quit": "esc",
+    "remove": "backspace,d",
+    "selectDown": "shift+down,J",
+    "selectSingle": "s",
+    "selectUp": "shift+up,K",
+    "togglePin": "p",
+    "togglePinned": "tab",
+    "up": "up,k",
+    "yankFilter": "ctrl+s"
+  },
+  "imageDisplay": {
+    "type": "sixel",
+    "scaleX": 9,
+    "scaleY": 18,
+    "heightCut": 6
+  },
+  "excludedApps": [
+    "1Password",
+    "Bitwarden",
+    "KeePassXC",
+    "keepassxc",
+    "LastPass",
+    "Dashlane",
+    "Password Safe",
+    "Keychain Access"
+  ],
+  "autoPaste": {
+    "enabled": true,
+    "keybind": "ctrl+v",
+    "buffer": 10
+  },
+  "enableMouse": true,
+  "enableDescription": true
+}
