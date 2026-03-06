@@ -28,6 +28,7 @@ b = "cloud_calendar_remote"
 
 collections = ["from a", "from b"]
 metadata = ["displayname", "color"]
+conflict_resolution = null
 
 [storage cloud_calendar_local]
 type = "filesystem"
