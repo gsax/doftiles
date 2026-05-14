@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+tailscale status --json | jq -r '
+if .BackendState == "Stopped" then
+  "tailscale down"
+elif .BackendState == "Running" then
+  if .ExitNodeStatus.Online == true then
+    "tailscale up" as $status |
+      "IPs:" as $ips_label |
+      (.TailscaleIPs | map("  " + .) | join("\n")) as $ips |
+      "Exit Node IPs:" as $exit_ips_label |
+      (.ExitNodeStatus.TailscaleIPs |
+      map("  " + sub("/.*"; "")) | join("\n")) as $exit_ips |
+      $status + "\n\n" + $ips_label + "\n" + $ips + 
+    "\n\n" + $exit_ips_label + "\n" + $exit_ips
+  else
+    "tailscale up" as $status |
+      "IPs:" as $ips_label |
+      (.TailscaleIPs | map("  " + .) | join("\n")) as $ips |
+      "Exit Node Offline" as $exit_offline |
+      $status + "\n\n" + $ips_label + "\n" + $ips + 
+    "\n\n" + $exit_offline
+  end
+else
+  "unknown state"
+end
+'
+tailscale debug prefs | jq -r '
+if .ExitNodeAllowLANAccess == false then
+  "\nNO LAN ACCESS!!"
+else
+  empty
+end
+'
+
