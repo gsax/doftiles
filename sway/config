@@ -74,7 +74,7 @@ exec swayidle -w \
     resume 'swaymsg "output * dpms on"'
 
 # start clipse clipboard manager
-exec = clipse -listen
+exec clipse -listen
 
 ### Input configuration
 #
@@ -281,3 +281,4 @@ default_dim_inactive 0.1
 
 include $XDG_CONFIG_HOME/sway/config.d/*
 include /etc/sway/config.d/*
+
