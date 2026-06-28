@@ -34,8 +34,8 @@ function fish_right_prompt -d "Write out the right prompt"
     if test 1 -eq "$SHLVL"
         # echo "Not in subshell"
     else if test 1 -lt "$SHLVL"
-        echo (set_color yellow)\((set_color green)lvl (set_color blue)"$SHLVL"(set_color yellow)\)
+        lvl
     else
-        echo (set_color red) strange should never be reached (set_color yellow)\((set_color green)lvl (set_color blue)"$SHLVL"(set_color yellow)\)
+        echo -n (set_color red)" strange should never be reached "; lvl
     end
 end
