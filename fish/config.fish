@@ -41,8 +41,9 @@ if status is-interactive
     alias ffplay 'ffplay -hide_banner'
     alias ffprobe 'ffprobe -hide_banner'
 
-    # we use nmap with capabilities, so we don't need root
+    # we use nmap/nping with capabilities, so we don't need root
     alias nmap 'nmap --privileged'
+    alias nping 'nping --privileged'
 
     ## system administration
     # change global config
