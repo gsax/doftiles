@@ -283,6 +283,10 @@ filextype {*.sh3d}
         \ {Open in Sweet Home 3D}
         \ sweethome3d %c:p,
 filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
+        \ {View in nomacs}
+        \ nomacs %f,
+        \ {View in vimiv}
+        \ vimiv %f,
         \ {View in sxiv}
         \ sxiv %f,
         \ {View in gpicview}
