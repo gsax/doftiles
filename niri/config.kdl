@@ -82,6 +82,19 @@ window-rule {
     open-floating true
 }
 
+blur {
+    on
+    passes 2
+    offset 1.0
+}
+
+window-rule {
+    background-effect {
+        xray true
+        blur true
+    }
+}
+
 window-rule {
     match app-id="^LAUNCHER$"
     open-floating true
@@ -98,8 +111,8 @@ window-rule {
     background-effect {
         xray false
         blur true
-        noise 0.05
-        saturation 3
+        noise 0.1
+        saturation 2.5
     }
 }
 
@@ -118,8 +131,8 @@ window-rule {
     background-effect {
         xray false
         blur true
-        noise 0.05
-        saturation 3
+        noise 0.1
+        saturation 2.5
     }
 }
 
@@ -138,8 +151,8 @@ window-rule {
     background-effect {
         xray false
         blur true
-        noise 0.05
-        saturation 3
+        noise 0.1
+        saturation 2.5
     }
 }
 
